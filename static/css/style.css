@@ -81,20 +81,20 @@ body {
 
 /* !important is used in order to override bootstrap colour settings */
 
+.transparent-bg {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 /* ===Navbar=== */
 .logo-nav {
     max-width: 40px;
 }
 
-.transparent-bg {
-    background: rgba(0, 0, 0, 0.2);
-}
-
 /* === Hero homepage === */
-.hero-homepage {
+.home-hero-container {
 background: url(/media/lotus-bg.jpg) no-repeat top center fixed;
 background-size:cover;
-height:80vh;
+height:100vh;
 }
 
 
@@ -135,9 +135,9 @@ height:80vh;
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     
-
-    body {
-        height: calc(100vh - 116px);
+body {
+        height:calc(100vh-116px);
     }
+    
 
 }
