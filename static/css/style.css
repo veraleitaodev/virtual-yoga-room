@@ -35,25 +35,49 @@ body {
     color: #f2f2f2 !important;
 }
 
+.bg-white {
+    background-color: #f2f2f2 !important;
+}
+
 .black {
     color: #0D0D0D !important;
 }
 
-.ogo-green {
+.bg-black {
+    background-color: #0D0D0D !important;
+}
+
+.logo-green {
     color: #819FA6 !important;
+}
+
+.bg-logo-green {
+    background-color: #819FA6 !important;
 }
 
 .pink {
     color: #D9B4C8 !important;
 }
 
+.bg-pink {
+    background-color: #D9B4C8 !important;
+}
+
 .light-green {
     color:#A4BF88 !important;
+}
+
+.bg-light-green {
+    background-color: #A4BF88 !important;
 }
 
 .dark-green {
     color: #718C49 !important; 
 } 
+
+.bg-dark-green {
+    background-color: #718C49 !important;
+}
 
 /*!important is used in order to override bootstrap colour settings*/
 
