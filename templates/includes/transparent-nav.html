@@ -1,6 +1,6 @@
 {% load static %}
 
-    <!--transparent header with dropdown account icon and shopping bag icon - used navbar I created for SandrArt project with some modifications-->
+    <!--transparent header with dropdown account icon and shopping bag icon - used navbar I have created for SandrArt project with some modifications-->
     <div class="container-fluid">
         <div class="row transparent-bg d-row-flex justify-content-end px-0">
             <div class="col-8 col-md-4">
@@ -9,7 +9,7 @@
 
                          <!-- Search Icon with dropdown box-->
                         <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div><i class="fas fa-search"></i></div>
+                            <div><i class="fas fa-search black"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
                             <form class="form" method="GET" action="">
@@ -17,7 +17,7 @@
                                     <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
                                         <button class="form-control form-control btn btn-dark border border-dark rounded-0" type="submit">
-                                            <span class="icon">
+                                            <span class="black">
                                                 <i class="fas fa-search"></i>
                                             </span>
                                         </button>
@@ -30,7 +30,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-placement="bottom" title="My Account">
-                            <div class="text-center">
+                            <div class="text-center black">
                                 <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
                             </div>
                         </a>
@@ -49,7 +49,7 @@
                     </li>
                     <!-- Shopping bag Icon -->
                     <li class="list-inline-item ">
-                        <a class="{% if grand_total %}grey font-weight-bold{% else %}text-dark{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
+                        <a class="{% if grand_total %}logo-green font-weight-bold{% else %}black{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
                             <div class="text-center">
                                 <div><i class="fas fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
                             </div>
@@ -77,31 +77,31 @@
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-                        <!-- Gallery link -->
+                        
+                        <!-- Classes link -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link simple-nav-item p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Gallery</a>
-                            <ul class="dropdown-menu bg-lightgrey border-0" aria-labelledby="gallery-link">
-                                <li><a href="" class="dropdown-item letter-dropdown">By Price</a></li>
-                                <li><a href="" class="dropdown-item letter-dropdown">By Collection</a></li>
-                                <li><a href="" class="dropdown-item letter-dropdown">All Artwork</a></li>
-                            </ul>
+                            <a class="nav-link p-3" href="">Classes</a>
                         </li>
-                        <!-- Collections link -->
+
+                        <!-- Shop link -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link black simple-nav-item p-3" id="collections-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Collections</a>
-                            <ul class="dropdown-menu bg-lightgrey border-0" aria-labelledby="collections-link">
-                                <li><a href="" class="dropdown-item letter-dropdown">Ballerinas</a></li>
-                                <li><a href="" class="dropdown-item letter-dropdown">Traditions</a></li>
-                                <li><a href="" class="dropdown-item letter-dropdown">Reflections</a></li>
-                            </ul>
+                            <a class="nav-link p-3" href="">Shop</a>
                         </li>
+
                         <!-- About link -->
                         <li class="nav-item">
-                            <a class="nav-link simple-nav-item p-3" href="#">About</a>
+                            <a class="nav-link p-3" href="#">About</a>
                         </li>
+
+                        <!-- Team link -->
+                        <li class="nav-item">
+                            <a class="nav-link p-3" href="#">Team</a>
+                        </li>
+
+                        
                         <!-- Contact link -->
                         <li class="nav-item">
-                            <a class="nav-link simple-nav-item p-3" href="#">Contact</a>
+                            <a class="nav-link p-3" href="#">Contact</a>
                         </li>
                     </ul>
                 </div>
