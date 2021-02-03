@@ -1,0 +1,110 @@
+{% load static %}
+
+    <!--transparent header with dropdown account icon and shopping bag icon - used navbar I created for SandrArt project with some modifications-->
+    <div class="container-fluid">
+        <div class="row  d-row-flex justify-content-end px-0">
+            <div class="col-8 col-md-4">
+                <ul class=" nav list-inline list-unstyled me-auto txt-center w-100">
+                    <li class="list-inline-item dropdown">
+
+                         <!-- Search Icon with dropdown box-->
+                        <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div><i class="fas fa-search"></i></div>
+                        </a>
+                        <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
+                            <form class="form" method="GET" action="">
+                                <div class="input-group w-100">
+                                    <input class="form-control border border-dark rounded-0" type="text" name="q" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="form-control form-control btn btn-dark border border-dark rounded-0" type="submit">
+                                            <span class="icon">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <!-- Account Icon with dropdown -->
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-placement="bottom" title="My Account">
+                            <div class="text-center">
+                                <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <li><a class="dropdown-item" href="">Item Management</a></li>
+                            {% endif %}
+                            <li><a class="dropdown-item" href="">My Profile</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <!-- Shopping bag Icon -->
+                    <li class="list-inline-item ">
+                        <a class="{% if grand_total %}grey font-weight-bold{% else %}text-dark{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
+                            <div class="text-center">
+                                <div><i class="fas fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Collapsible navbar with bootstrap framework-->
+        <nav class="navbar row navbar-expand-lg navbar-light bg-white px-3" id="navbar-colour" role="navigation">
+            <div class="container-fluid">
+                
+                <!-- logo -->
+                <a class="navbar-brand" href="{% url 'home' %}">
+                    <img src=""
+                        alt="logo" class="logo-nav"/> 
+                </a>
+                <!-- collapsible button with links  -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span><i class="fas fa-bars black"></i></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- Gallery link -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link simple-nav-item p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Gallery</a>
+                            <ul class="dropdown-menu bg-lightgrey border-0" aria-labelledby="gallery-link">
+                                <li><a href="" class="dropdown-item letter-dropdown">By Price</a></li>
+                                <li><a href="" class="dropdown-item letter-dropdown">By Collection</a></li>
+                                <li><a href="" class="dropdown-item letter-dropdown">All Artwork</a></li>
+                            </ul>
+                        </li>
+                        <!-- Collections link -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link black simple-nav-item p-3" id="collections-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Collections</a>
+                            <ul class="dropdown-menu bg-lightgrey border-0" aria-labelledby="collections-link">
+                                <li><a href="" class="dropdown-item letter-dropdown">Ballerinas</a></li>
+                                <li><a href="" class="dropdown-item letter-dropdown">Traditions</a></li>
+                                <li><a href="" class="dropdown-item letter-dropdown">Reflections</a></li>
+                            </ul>
+                        </li>
+                        <!-- About link -->
+                        <li class="nav-item">
+                            <a class="nav-link simple-nav-item p-3" href="#">About</a>
+                        </li>
+                        <!-- Contact link -->
+                        <li class="nav-item">
+                            <a class="nav-link simple-nav-item p-3" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
