@@ -7,4 +7,13 @@ $(document).ready(function () {
     $('#navbarSupportedContent').addClass('bg-black');
   });
 
+  // on scroll down homepage change navbar background to black
+  $(window).scroll(function(){
+      if ($(this).scrollTop() > 50) {
+         $('#transparent-navbar').addClass('bg-dark-pink');
+      } else {
+         $('#transparent-navbar').removeClass('bg-dark-pink');
+      }
+  });
+
 });

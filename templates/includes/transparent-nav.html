@@ -1,10 +1,68 @@
 {% load static %}
 
     <!--transparent header with dropdown account icon and shopping bag icon - used navbar I have created for SandrArt project with some modifications-->
-    <div class="container-fluid fixed-top">
-        <div class="row transparent-bg d-row-flex justify-content-end px-0 pb-2">
+    <div class="container-fluid fixed-top" id="transparent-navbar">
+        <div class="row d-row-flex justify-content-end px-0 pb-2">
             <div class="col-10">
-                <ul class=" nav list-inline justify-content-end list-unstyled me-auto txt-center w-100">
+
+                <!-- SMALL SCREENS - FIRST ROW only displays icons for my account | search | shopping cart  -->
+                <ul class=" nav list-inline d-flex d-md-none justify-content-end list-unstyled me-auto txt-center w-100">
+                     <!-- Account Icon with dropdown -->
+                    <li class="list-inline-item dropdown">
+                        <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown"
+                        aria-expanded="false" data-bs-placement="bottom" title="My Account">
+                            <div class="text-center white">
+                                <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                                <li><a class="dropdown-item" href="">Item Management</a></li>
+                            {% endif %}
+                                <li><a class="dropdown-item" href="">My Profile</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            {% else %}
+                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                    <li class="list-inline-item dropdown">
+
+                         <!-- Search Icon with dropdown box-->
+                        <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div><i class="fas fa-search white"></i></div>
+                        </a>
+                        <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
+                            <form class="form" method="GET" action="">
+                                <div class="input-group w-100">
+                                    <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="form-control form-control btn btn-dark" type="submit">
+                                            <span class="white">
+                                                <i class="fas fa-search"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <!-- Shopping cart Icon -->
+                    <li class="list-inline-item ">
+                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- MEDIUM AND LARGER SCREENS - FIRST ROW display badger and words 'login' and 'register' -->
+                <ul class=" nav list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
+
+                    <!-- free trial badger -->
                     <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2" href=""><strong>Free Trial</strong></li>
                     {% if request.user.is_authenticated %}
                     <!-- Account Icon with dropdown -->
@@ -59,11 +117,12 @@
                         </a>
                     </li>
                 </ul>
+                
             </div>
         </div>
 
         <!-- second row of Navbar > Collapsible navbar with bootstrap framework-->
-        <nav class="navbar transparent-bg row d-flex align-items-end navbar-expand-lg navbar-light px-3" id="navbar-colour" role="navigation">
+        <nav class="navbar row d-flex align-items-end navbar-expand-lg navbar-light px-3" id="navbar-colour" role="navigation">
             <div class="container-fluid">
                 
                 <!-- logo with text to display in medium and larger screens -->
