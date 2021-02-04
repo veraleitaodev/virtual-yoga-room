@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Poiret+One&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Big+Shoulders+Display&family=Poiret+One&family=Poppins:wght@400;600;700&display=swap');
 
 * {
   padding: 0;
@@ -19,8 +19,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: black;
+    font-family: 'Baloo 2', sans-serif;
 }
 
 /*--- colours ---*/
@@ -99,6 +98,13 @@ h3 {
     letter-spacing: 1px;
 }
 
+.logo-text {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: x-large;
+    letter-spacing: 3px;
+    margin-left: 15px;
+}
+
 /* ===Navbar=== */
 .logo-nav {
     max-width: 30px;
@@ -115,6 +121,11 @@ background-size:cover;
 height:100vh;
 }
 
+@media (min-width: 768px) {
+  .logo-nav {
+    max-width: 40px;
+}
+}
 
 @media (min-width: 992px) {
   
@@ -126,7 +137,7 @@ height:100vh;
   }
 
   .logo-nav {
-    max-width: 100px;
+    max-width: 60px;
 }
 
 }
@@ -146,7 +157,7 @@ height:100vh;
     }
 
     .logo-nav {
-    max-width: 80px;
+    max-width: 45px;
 }
 }
 
