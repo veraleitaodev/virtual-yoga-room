@@ -1,0 +1,156 @@
+[
+    {
+        "pk": 1,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-1-MED-0001",
+            "name": "Meditation with Movement",
+            "description": "Yoga practices to find ease in the body in preparation for guided meditations",
+            "videos": 27,
+            "category": 1,
+            "image": "warrior-sunset.jpg",
+            "image_url": "",
+            "rating": 4.9
+        }
+    },
+    {
+        "pk": 2,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-1-TAN-0001",
+            "name": "Tantra classes",
+            "description": "Practices and rituals to study the universe through the human microcosm",
+            "videos": 31,
+            "category": 1,
+            "image": "warrior-sunset.jpg",
+            "image_url": "",
+            "rating": 5
+        }
+    },
+    {
+        "pk": 3,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-1-VIR-0001",
+            "name": "Virtual Yoga Retreat",
+            "description": "Join us on a 7 day virtual yoga retreat",
+            "videos": 10,
+            "category": 1,
+            "image": "virtual-yoga-retreat.jpg",
+            "image_url": "",
+            "rating": 4.7
+        }
+    },
+    {
+        "pk": 4,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-2-YOG-0001",
+            "name": "Yoga for beginners",
+            "description": "Begin your yoga journey with this 4-week course",
+            "videos": 14,
+            "category": 2,
+            "image": "virtual-meditation-class.jpg",
+            "image_url": "",
+            "rating": 4.8
+        }
+    },
+    {
+        "pk": 5,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-2-VIS-0001",
+            "name": "Visyana Yoga level 1",
+            "description": "Discover a new confidence, strength, and flexibility with Level 1 Vinyasa yoga classes",
+            "videos": 28,
+            "category": 2,
+            "image": "virtual-meditation-class.jpg",
+            "image_url": "",
+            "rating": 4.9
+        }
+    },
+    {
+         "pk": 6,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-3-VIS-0001",
+            "name": "Visyana",
+            "description": "Move to challenge your strength and inspire the opening of your heart",
+            "videos": 83,
+            "category": 3,
+            "image": "pose-bw.jpg",
+            "image_url": "",
+            "rating": 5
+        }
+    },
+    {
+          "pk": 7,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-3-YOG-0001",
+            "name": "Yoga Flow",
+            "description": "Energize, refresh, and strengthen in just thirty minutes",
+            "videos": 83,
+            "category": 3,
+            "image": "pose-2.jpg",
+            "image_url": "",
+            "rating": 4.6
+        }
+    },
+    {
+          "pk": 8,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-3-SUN-0001",
+            "name": "Sun Rising Yoga",
+            "description": "Vinyasa sequences designed to awaken the body, inspire the heart and prepare the mind for the day",
+            "videos": 46,
+            "category": 3,
+            "image": "pose-4.jpg",
+            "image_url": "",
+            "rating": 4.9
+        }
+    },
+    {
+          "pk": 9,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-3-30D-0001",
+            "name": "30-Day Yoga Challenge",
+            "description": "Build strength, flexibility, and confidence in YOU with this 30-Day Yoga Challenge.",
+            "videos": 30,
+           "category": 3,
+            "image": "pose-bw.jpg",
+            "image_url": "",
+            "rating": 4.5
+        }
+    },
+    {
+          "pk": 10,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-4-YOG-0001",
+            "name": "Yoga for Trauma",
+            "description": "Build strength, flexibility, and confidence in YOU with this 30-Day Yoga Challenge.",
+            "videos": 30,
+            "category": 4,
+            "image": "back-beach.jpg",
+            "image_url": "",
+            "rating": 4.9
+        }
+    },
+    {
+          "pk": 11,
+        "model": "classes.class",
+        "fields": {
+            "sku": "CLA-4-YOG-0002",
+            "name": "Yoga for Your Back",
+            "description": "Build strength, flexibility, and confidence in YOU with this 30-Day Yoga Challenge.",
+            "videos": 46,
+            "category": 4,
+            "image": "yoga-meadow.jpg",
+            "image_url": "",
+            "rating": 4.7
+        }
+    }
+]
