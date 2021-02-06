@@ -7,7 +7,7 @@ class ClassAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
-        'videos',
+        'number_videos',
         'image',
         'image_url',
         'description',
