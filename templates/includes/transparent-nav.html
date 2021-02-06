@@ -65,13 +65,13 @@
                     {% if request.user.is_authenticated %}
                     <!-- Account Icon with dropdown -->
                     <li class="list-inline-item dropdown">
-                        <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown"
+                        <a class="nav-link" type="text" id="dropdownMenu1" data-bs-toggle="dropdown"
                         aria-expanded="false" data-bs-placement="bottom" title="My Account">
                             <div class="text-center white">
                                 <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
                             </div>
                         </a>
-                        <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu">
+                        <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu1">
                              
                             {% if request.user.is_superuser %}
                             <li><a class="dropdown-item" href="">Item Management</a></li>
@@ -88,10 +88,10 @@
                     <li class="list-inline-item dropdown">
 
                          <!-- Search Icon with dropdown box-->
-                        <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="#" id="iconSearch" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div><i class="fas fa-search white"></i></div>
                         </a>
-                        <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
+                        <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
                             <form class="form" method="GET" action="">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
