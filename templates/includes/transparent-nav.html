@@ -62,8 +62,6 @@
                 <!-- MEDIUM AND LARGER SCREENS - FIRST ROW display badger and words 'login' and 'register' -->
                 <ul class=" nav list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
 
-                    <!-- free trial badger -->
-                    <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2" href=""><strong>Free Trial</strong></li>
                     {% if request.user.is_authenticated %}
                     <!-- Account Icon with dropdown -->
                     <li class="list-inline-item dropdown">
@@ -116,6 +114,9 @@
                             </div>
                         </a>
                     </li>
+                    <!-- free trial badger -->
+                    <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2" href=""><strong>Free Trial</strong></li>
+
                 </ul>
                 
             </div>

@@ -11,6 +11,7 @@ $(document).ready(function () {
   $(window).scroll(function(){
       if ($(this).scrollTop() > 50) {
          $('#transparent-navbar').addClass('bg-dark-pink');
+         
       } else {
          $('#transparent-navbar').removeClass('bg-dark-pink');
       }

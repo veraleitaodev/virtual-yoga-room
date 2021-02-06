@@ -3,7 +3,7 @@ from .models import Class
 
 
 def all_classes(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all classes, including sorting and search queries """
 
     classes = Class.objects.all()
 

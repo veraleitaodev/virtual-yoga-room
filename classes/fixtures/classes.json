@@ -9,7 +9,7 @@
             "number_videos": 27,
             "category": 1,
             "image": "warrior-sunset.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583590/warrior-sunset_xz740n.jpg",
             "rating": 4.9
         }
     },
@@ -22,8 +22,8 @@
             "description": "Practices and rituals to study the universe through the human microcosm",
             "number_videos": 31,
             "category": 1,
-            "image": "warrior-sunset.jpg",
-            "image_url": "",
+            "image": "tantra-yoga.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589100/tantra-yoga_wixz5c.jpg",
             "rating": 5
         }
     },
@@ -37,7 +37,7 @@
             "number_videos": 10,
             "category": 1,
             "image": "virtual-yoga-retreat.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589535/virtual-yoga-retreat_xrdoww.jpg",
             "rating": 4.7
         }
     },
@@ -51,7 +51,7 @@
             "number_videos": 14,
             "category": 2,
             "image": "virtual-meditation-class.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589094/virtual-meditation-class_gizler.jpg",
             "rating": 4.8
         }
     },
@@ -64,8 +64,8 @@
             "description": "Discover a new confidence, strength, and flexibility with Level 1 Vinyasa yoga classes",
             "number_videos": 28,
             "category": 2,
-            "image": "virtual-meditation-class.jpg",
-            "image_url": "",
+            "image": "pose-3.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583575/pose-3_p0gbrw.jpg",
             "rating": 4.9
         }
     },
@@ -79,7 +79,7 @@
             "number_videos": 83,
             "category": 3,
             "image": "pose-bw.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589073/pose-bw_yliglv.jpg",
             "rating": 5
         }
     },
@@ -93,7 +93,7 @@
             "number_videos": 83,
             "category": 3,
             "image": "pose-2.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612576473/pose-2_fdcm8c.jpg",
             "rating": 4.6
         }
     },
@@ -107,7 +107,7 @@
             "number_videos": 46,
             "category": 3,
             "image": "pose-4.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583589/pose-4_lyi8wt.jpg",
             "rating": 4.9
         }
     },
@@ -121,7 +121,7 @@
             "number_videos": 30,
            "category": 3,
             "image": "pose-bw.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589073/pose-bw_yliglv.jpg",
             "rating": 4.5
         }
     },
@@ -135,7 +135,7 @@
             "number_videos": 30,
             "category": 4,
             "image": "back-beach.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589033/back-beach_xihny8.jpg",
             "rating": 4.9
         }
     },
@@ -149,7 +149,7 @@
             "number_videos": 46,
             "category": 4,
             "image": "yoga-meadow.jpg",
-            "image_url": "",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589088/yoga-meadow_livhl4.jpg",
             "rating": 4.7
         }
     }
