@@ -3,16 +3,16 @@
         "pk": 1,
         "model": "classes.category",
         "fields": {
-            "name": "connect",
-            "friendly_name": "Connect"
+            "name": "beginners",
+            "friendly_name": "Beginners"
         }
     },
      {
         "pk": 2,
         "model": "classes.category",
         "fields": {
-            "name": "begin_yoga",
-            "friendly_name": "Begin Yoga"
+            "name": "challenges",
+            "friendly_name": "Challenges"
         }
     },
      {
@@ -29,6 +29,14 @@
         "fields": {
             "name": "therapeutic",
             "friendly_name": "Therapeutic"
+        }
+    },
+     {
+        "pk": 5,
+        "model": "classes.category",
+        "fields": {
+            "name": "relax_restore",
+            "friendly_name": "Relax and Restore"
         }
     }
 ]
