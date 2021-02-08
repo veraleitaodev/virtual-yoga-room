@@ -11,4 +11,4 @@ def all_classes(request):
         'classes': classes,
     }
 
-    return render(request, 'classes/classes.html', context)
+    return render(request, 'products/classes.html', context)

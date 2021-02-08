@@ -17,7 +17,7 @@
         </div>
 
         <div class="row pb-3">
-            {% for class in classes %}
+            {% for class in products %}
             <div data-aos="fade-up" class="col-md-4">
                 <div class="card classes-card shadow-lg mb-5 mx-3">
                     <a href="">
@@ -28,7 +28,7 @@
                         <p class="card-text text-md">{{ class.description }}.</p>
                     </div>
                     <ul class="list-group list-group-flush text-center">
-                        <li class="list-group-item text-muted">{{class.number_videos}} videos</li>
+                        <li class="list-group-item text-muted"></li>
                         <li class="list-group-item"><small class="text-muted logo-green"><i
                                     class="fas fa-star logo-green pr-2"></i> {{ class.rating }} / 5</small></li>
                     </ul>

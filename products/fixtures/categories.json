@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "classes.category",
+        "model": "products.category",
         "fields": {
             "name": "beginners",
             "friendly_name": "Beginners"
@@ -9,7 +9,7 @@
     },
      {
         "pk": 2,
-        "model": "classes.category",
+        "model": "products.category",
         "fields": {
             "name": "challenges",
             "friendly_name": "Challenges"
@@ -17,7 +17,7 @@
     },
      {
         "pk": 3,
-        "model": "classes.category",
+        "model": "products.category",
         "fields": {
             "name": "dynamic",
             "friendly_name": "Dynamic"
@@ -25,7 +25,7 @@
     },
      {
         "pk": 4,
-        "model": "classes.category",
+        "model": "products.category",
         "fields": {
             "name": "therapeutic",
             "friendly_name": "Therapeutic"
@@ -33,7 +33,7 @@
     },
      {
         "pk": 5,
-        "model": "classes.category",
+        "model": "products.category",
         "fields": {
             "name": "relax_restore",
             "friendly_name": "Relax and Restore"

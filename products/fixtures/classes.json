@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BEG-001-CLA-001",
             "name": "Class 1 - Foundation",
@@ -16,7 +16,7 @@
         }
     }, {
         "pk": 2,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BEG-001-CLA-002",
             "name": "Class 2 - Alignment",
@@ -31,7 +31,7 @@
         }
     }, {
         "pk": 3,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BEG-001-CLA-003",
             "name": "Class 3 - Strength & Power",
@@ -46,7 +46,7 @@
         }
     }, {
         "pk": 4,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BEG-001-CLA-004",
             "name": "Class 4 - The Art of Flow",
@@ -61,7 +61,7 @@
         }
     }, {
         "pk": 5,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BEG-001-CLA-005",
             "name": "Class 5 - Practice Presence",
@@ -76,7 +76,7 @@
         }
     }, {
         "pk": 6,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-YOG-001",
             "name": "Yoga for Beginners",
@@ -91,7 +91,7 @@
         }
     }, {
         "pk": 7,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-INT-001",
             "name": "Intro to Yoga - 1",
@@ -106,7 +106,7 @@
         }
     }, {
         "pk": 8,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-INT-002",
             "name": "Intro to Yoga - 2",
@@ -121,7 +121,7 @@
         }
     }, {
         "pk": 9,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-INT-003",
             "name": "Intro to Yoga - 3",
@@ -136,7 +136,7 @@
         }
     }, {
         "pk": 10,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-QIY-001",
             "name": "Qi Yoga for Beginners",
@@ -151,7 +151,7 @@
         }
     }, {
         "pk": 11,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-ALI-001",
             "name": "Align the Spine",
@@ -166,7 +166,7 @@
         }
     }, {
         "pk": 12,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "BEG-BAS-001-BAL-001",
             "name": "Balance",
@@ -181,7 +181,7 @@
         }
     }, {
         "pk": 13,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-001",
             "name": "Day 1",
@@ -196,7 +196,7 @@
         }
     }, {
         "pk": 14,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-002",
             "name": "Day 2",
@@ -211,7 +211,7 @@
         }
     }, {
         "pk": 15,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-003",
             "name": "Day 3",
@@ -226,7 +226,7 @@
         }
     }, {
         "pk": 16,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-004",
             "name": "Day 4",
@@ -241,7 +241,7 @@
         }
     }, {
         "pk": 17,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-005",
             "name": "Day 5",
@@ -256,7 +256,7 @@
         }
     }, {
         "pk": 18,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-005",
             "name": "Day 5",
@@ -271,7 +271,7 @@
         }
     }, {
         "pk": 19,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-006",
             "name": "Day 6",
@@ -286,7 +286,7 @@
         }
     }, {
         "pk": 20,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-007",
             "name": "Day 7",
@@ -301,7 +301,7 @@
         }
     }, {
         "pk": 21,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-008",
             "name": "Day 8",
@@ -316,7 +316,7 @@
         }
     }, {
         "pk": 22,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-009",
             "name": "Day 9",
@@ -331,7 +331,7 @@
         }
     }, {
         "pk": 23,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-010",
             "name": "Day 10",
@@ -346,7 +346,7 @@
         }
     }, {
         "pk": 24,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-011",
             "name": "Day 11",
@@ -361,7 +361,7 @@
         }
     }, {
         "pk": 25,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-012",
             "name": "Day 12",
@@ -376,7 +376,7 @@
         }
     }, {
         "pk": 26,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-013",
             "name": "Day 13",
@@ -391,7 +391,7 @@
         }
     }, {
         "pk": 27,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-14D-001-DAY-014",
             "name": "Day 14",
@@ -406,7 +406,7 @@
         }
     }, {
         "pk": 28,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-5DA-001-EVE-001",
             "name": "Evening 1",
@@ -421,7 +421,7 @@
         }
     }, {
         "pk": 29,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-5DA-001-EVE-002",
             "name": "Evening 2",
@@ -436,7 +436,7 @@
         }
     }, {
         "pk": 30,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-5DA-001-EVE-003",
             "name": "Evening 3",
@@ -451,7 +451,7 @@
         }
     }, {
         "pk": 31,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-5DA-001-EVE-004",
             "name": "Evening 4",
@@ -466,7 +466,7 @@
         }
     }, {
         "pk": 32,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "CHA-5DA-001-EVE-005",
             "name": "Evening 5",
@@ -481,7 +481,7 @@
         }
     }, {
         "pk": 33,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-001",
             "name": "class 1",
@@ -496,7 +496,7 @@
         }
     }, {
         "pk": 34,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-002",
             "name": "Class 2",
@@ -511,7 +511,7 @@
         }
     }, {
         "pk": 35,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-003",
             "name": "Class 3",
@@ -526,7 +526,7 @@
         }
     }, {
         "pk": 36,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-004",
             "name": "Class 4",
@@ -541,7 +541,7 @@
         }
     }, {
         "pk": 37,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-005",
             "name": "Class 5",
@@ -556,7 +556,7 @@
         }
     }, {
         "pk": 38,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-006",
             "name": "Class 6",
@@ -571,7 +571,7 @@
         }
     }, {
         "pk": 39,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-007",
             "name": "Class 7",
@@ -586,7 +586,7 @@
         }
     }, {
         "pk": 40,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-YOG-001-CLA-008",
             "name": "Class 8",
@@ -601,7 +601,7 @@
         }
     }, {
         "pk": 41,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-001",
             "name": "Class 1",
@@ -616,7 +616,7 @@
         }
     }, {
         "pk": 42,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-002",
             "name": "Class 2",
@@ -631,7 +631,7 @@
         }
     }, {
         "pk": 43,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-003",
             "name": "Class 3",
@@ -646,7 +646,7 @@
         }
     }, {
         "pk": 44,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-004",
             "name": "Class 4",
@@ -661,7 +661,7 @@
         }
     }, {
         "pk": 45,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-005",
             "name": "Class 5",
@@ -676,7 +676,7 @@
         }
     }, {
         "pk": 46,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-006",
             "name": "Class 6",
@@ -691,7 +691,7 @@
         }
     }, {
         "pk": 47,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-007",
             "name": "Class 7",
@@ -706,7 +706,7 @@
         }
     }, {
         "pk": 48,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-008",
             "name": "Class 8",
@@ -721,7 +721,7 @@
         }
     }, {
         "pk": 49,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-009",
             "name": "Class 9",
@@ -736,7 +736,7 @@
         }
     }, {
         "pk": 50,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "DYN-HAR-001-CLA-010",
             "name": "Class 10",
@@ -751,7 +751,7 @@
         }
     }, {
         "pk": 51,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-001",
             "name": "Day 1",
@@ -766,7 +766,7 @@
         }
     }, {
         "pk": 52,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-002",
             "name": "Day 2",
@@ -781,7 +781,7 @@
         }
     }, {
         "pk": 53,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-003",
             "name": "Day 3",
@@ -796,7 +796,7 @@
         }
     }, {
         "pk": 54,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-004",
             "name": "Day 4",
@@ -811,7 +811,7 @@
         }
     }, {
         "pk": 55,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-005",
             "name": "Day 5",
@@ -826,7 +826,7 @@
         }
     }, {
         "pk": 56,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-006",
             "name": "Day 6",
@@ -841,7 +841,7 @@
         }
     }, {
         "pk": 57,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-007",
             "name": "Day 7",
@@ -856,7 +856,7 @@
         }
     }, {
         "pk": 58,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-008",
             "name": "Day 8",
@@ -871,7 +871,7 @@
         }
     }, {
         "pk": 59,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-009",
             "name": "Day 9",
@@ -886,7 +886,7 @@
         }
     }, {
         "pk": 60,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-010",
             "name": "Day 10",
@@ -901,7 +901,7 @@
         }
     }, {
         "pk": 61,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-011",
             "name": "Day 11",
@@ -916,7 +916,7 @@
         }
     }, {
         "pk": 62,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-012",
             "name": "Day 12",
@@ -931,7 +931,7 @@
         }
     }, {
         "pk": 63,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-013",
             "name": "Day 13",
@@ -946,7 +946,7 @@
         }
     }, {
         "pk": 64,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-14D-001-DAY-014",
             "name": "Day 14",
@@ -961,7 +961,7 @@
         }
     }, {
         "pk": 65,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-PRA-001",
             "name": "Pranyama for Better Sleep",
@@ -976,7 +976,7 @@
         }
     }, {
         "pk": 66,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-YOG-001",
             "name": "Yoga for a Good Night's Sleep",
@@ -991,7 +991,7 @@
         }
     }, {
         "pk": 67,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-NIG-001",
             "name": "Nighttime Nidra",
@@ -1006,7 +1006,7 @@
         }
     }, {
         "pk": 68,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-THE-001",
             "name": "Therapeutic Yoga for Stress, Anxiety, & Insomnia",
@@ -1021,7 +1021,7 @@
         }
     }, {
         "pk": 69,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-BED-001",
             "name": "Bedtime Yin with Body Scan",
@@ -1036,7 +1036,7 @@
         }
     }, {
         "pk": 70,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-TIB-001",
             "name": "Tibetan Yoga Nidra",
@@ -1051,7 +1051,7 @@
         }
     }, {
         "pk": 71,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "THE-YOG-001-YOG-002",
             "name": "Yoga for Better Sleep",
@@ -1066,7 +1066,7 @@
         }
     }, {
         "pk": 72,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-REL-001-SAR-001",
             "name": "Saraswati Hangs the Stars",
@@ -1081,7 +1081,7 @@
         }
     }, {
         "pk": 73,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-REL-001-NOF-001",
             "name": "No Fuss Restorative Yoga",
@@ -1096,7 +1096,7 @@
         }
     }, {
         "pk": 74,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-REL-001-TAK-001",
             "name": "Take a Load Off",
@@ -1111,7 +1111,7 @@
         }
     }, {
         "pk": 75,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-REL-001-SUP-001",
             "name": "Super Lazy Restorative",
@@ -1126,7 +1126,7 @@
         }
     }, {
         "pk": 76,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-REL-001-",
             "name": "Rest & Rejuvenate",
@@ -1141,7 +1141,7 @@
         }
     }, {
         "pk": 77,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-001",
             "name": "Yin Yoga for Stress Relief",
@@ -1156,7 +1156,7 @@
         }
     }, {
         "pk": 78,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-002",
             "name": "Yin Yoga for Energy and Clarity",
@@ -1171,7 +1171,7 @@
         }
     }, {
         "pk": 79,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-003",
             "name": "Yin Yoga & Breathwork for Relaxation",
@@ -1186,7 +1186,7 @@
         }
     }, {
         "pk": 80,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-004",
             "name": "Yin for Your Upper Body",
@@ -1201,7 +1201,7 @@
         }
     }, {
         "pk": 81,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-MEL-001",
             "name": "Melt and Let Go",
@@ -1216,7 +1216,7 @@
         }
     }, {
         "pk": 82,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-BED-001",
             "name": "Bedtime Yin with Body Scan",
@@ -1231,7 +1231,7 @@
         }
     }, {
         "pk": 83,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-005",
             "name": "Yin Yoga for Flexibility and Relaxation",
@@ -1246,7 +1246,7 @@
         }
     }, {
         "pk": 84,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-YIN-006",
             "name": "Yin: Release Resistance",
@@ -1261,7 +1261,7 @@
         }
     }, {
         "pk": 85,
-        "model": "classes.class",
+        "model": "products.class",
         "fields": {
             "sku": "REL-YIN-001-GEN-001",
             "name": "Gentle Yin for Your Neck",

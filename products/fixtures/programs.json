@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "classes.program",
+        "model": "products.program",
         "fields": {
             "sku": "BEG-BEG-001",
             "name": "Beginners Power Yoga",
@@ -16,7 +16,7 @@
     },
     {
         "pk": 2,
-        "model": "classes.program",
+        "model": "products.program",
         "fields": {
             "sku": "BEG-BAS-001",
             "name": "Basic Beginner Yoga Program",
@@ -31,7 +31,7 @@
     },
     {
         "pk": 3,
-        "model": "classes.program",
+        "model": "products.program",
         "fields": {
             "sku": "CHA-14D-001",
             "name": "14 Day Yoga Challenge for Busy People",
@@ -46,7 +46,7 @@
     },
     {
         "pk": 4,
-        "model": "classes.program",
+        "model": "products.program",
         "fields": {
             "sku": "CHA-5DA-001",
             "name": "5 Day Evening Challenge",
@@ -61,7 +61,7 @@
     },
     {
         "pk": 5,
-        "model": "classes.program",
+        "model": "products.program",
         "fields": {
             "sku": "DYN-YOG-001",
             "name": "Yoga for Weight Loss Program",
@@ -75,8 +75,8 @@
         }
     },
     {
-         "pk": 6,
-        "model": "classes.program",
+        "pk": 6,
+        "model": "products.program",
         "fields": {
             "sku": "DYN-HAR-001",
             "name": "Hardcore Yoga Program",
@@ -90,8 +90,8 @@
         }
     },
     {
-          "pk": 7,
-        "model": "classes.program",
+        "pk": 7,
+        "model": "products.program",
         "fields": {
             "sku": "THE-14D-001",
             "name": "14 Days Yoga - Shoulders and Neck Pain Relief",
@@ -105,8 +105,8 @@
         }
     },
     {
-          "pk": 8,
-        "model": "classes.program",
+        "pk": 8,
+        "model": "products.program",
         "fields": {
             "sku": "THE-YOG-001",
             "name": "Yoga for Better Sleep",
@@ -120,8 +120,8 @@
         }
     },
     {
-          "pk": 9,
-        "model": "classes.class",
+        "pk": 9,
+        "model": "products.program",
         "fields": {
             "sku": "REL-REL-001",
             "name": "Relaxing Yoga at Home",
@@ -135,13 +135,13 @@
         }
     },
     {
-          "pk": 10,
-        "model": "classes.class",
+        "pk": 10,
+        "model": "products.program",
         "fields": {
             "sku": "REL-YIN-001",
             "name": "Yin Yoga",
             "description": "Yin Yoga offers the chance to be still, be present, and work within, to deeply create more space in both the mind and body.",
-            "number_videos": 9,
+            "number_classes": 9,
             "category": 5,
             "instructor": "Katie Chang",
             "image": "back-beach.jpg",
