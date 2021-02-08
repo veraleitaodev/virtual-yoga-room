@@ -8,9 +8,11 @@ def index(request):
 
     category = Category.objects.all()
     program = Program.objects.all()
-    classes_section = Class.objects.all().order_by
+    classes_section = Class.objects.all()
+    programs_section = Program.objects.all()
     context = {
         'classes_section': classes_section,
+        'programs_section': programs_section,
         'category': category,
         'program': program,
     }

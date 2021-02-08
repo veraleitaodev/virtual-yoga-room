@@ -1,0 +1,47 @@
+ {% load static %}
+ 
+ <div class="container-fluid">
+    <div class="row my-5">
+        <div class="col-10 offset-1">
+            <h1 class="text-center">Featured Programs</h1>
+        </div>
+    </div>
+
+    <!-- row with cards displaying 3 classes available -->
+    <div class="row" >
+    {% for program in programs_section|slice:"3" %}
+    <div data-aos="fade-up" class="col-md-4">
+     <div class="card shadow-lg mb-5 mx-3">
+        <a href="">
+            <img class="card-img-top img-fluid shadow" 
+                    src="{{ program.image.url }}" 
+                    alt="{{ program.name }}">
+        </a>
+  <div class="card-body text-center">
+    <h5 class="card-title pb-2">{{ program.name }}</h5>
+    <p class="card-text text-md">{{ program.description }}.</p>
+  </div>
+  <ul class="list-group list-group-flush text-center">
+    <li class="list-group-item text-muted">{{ program.number_classes }} classes</li>
+    <li class="list-group-item"><small class="text-muted logo-green"><i class="fas fa-star logo-green pr-2"></i> {{ program.rating }} / 5</small></li>
+  </ul>
+  <div class="card-body my-2">
+      <div class="row">
+          <div class="col-12 d-flex justify-content-evenly mb-2">
+            <a href="#" class="btn bg-pink text-center shadow mr-3">Add to Cart</a>
+            <a href="#" class="btn btn-outline-dark dark-pink text-center "><small>More Info</small></a>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-12">
+             <p class="text-muted"><small>** This program is FREE with our 
+                 <a href="" class="logo-green text-decoration-none">subscription</a>
+                  membership! **</small></p>
+          </div>
+      </div>
+  </div>
+</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
