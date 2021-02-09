@@ -5,38 +5,43 @@
 {% block content %}
 <main>
     <section class="home-hero-container">
-        <!-- Hero -->
+    <!-- Hero -->
         {% include 'home/includes/hero.html' %}
     </section>
-        <!-- Programs -->
+        
+    <section>
+    <!-- Featured Classes section -->
+        {% include 'home/includes/classes-section.html' %}
+
+    </section>
+    <section>
+    <!-- Promotional section -->
+        {% include 'home/includes/promotional-section.html' %}
+
+    </section> 
+    <section>
+    <!-- Programs -->
         {% include 'home/includes/programs-section.html' %}
+    
+    </section>
     <section>
-
+    <!-- Team -->
+        {% include 'home/includes/team-section.html' %}
 
     </section>
-
-    <!-- Shop -->
     <section>
+    <!-- Reviews -->
+        {% include 'home/includes/reviews-section.html' %}
 
     </section>
-
-    <!-- About-->
     <section>
+    <!-- Membership details -->
+        {% include 'home/includes/membership-section.html' %}
 
     </section>
-
-    <!-- Team-->
     <section>
-
-    </section>
-
-    <!-- Clients-->
-    <section>
-
-    </section>
-
     <!-- Contact-->
-    <section>
+        {% include 'home/includes/contact-section.html' %}
 
     </section>
 
