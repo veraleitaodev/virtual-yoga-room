@@ -140,6 +140,10 @@ a.nav-link,
     font-weight: 400;
 }
 
+/* ===Pagination=== */
+.active-borders {
+    border-color: #0D0D0D !important;
+}
 
 /* ===Navbar=== */
 .logo-nav {
