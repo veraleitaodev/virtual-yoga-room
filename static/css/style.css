@@ -107,6 +107,7 @@ h1 {
 }
 
 h3,
+h4,
 h5 {
     font-family: 'Poiret', sans-serif;
     letter-spacing: 1px;
@@ -164,6 +165,19 @@ width: 100%;
 /*=== Classes page ===*/
 .classes-card {
     margin-bottom: 50px;
+}
+
+/*=== home page ===*/
+/*--- Promotional section ---*/
+.promotional-image {
+    background: url(https://res.cloudinary.com/veraleitao/image/upload/v1612890786/yoga-white-room_b7geqm.jpg) no-repeat bottom center;
+    background-size:cover;
+    height: 400px;
+    width: 100%;
+}
+
+.promotional-image h4 {
+    margin-top: 150px;
 }
 
 /*=== Cards ===*/
