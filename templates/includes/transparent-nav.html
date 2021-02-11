@@ -148,8 +148,13 @@
                     <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
                         
                         <!-- Classes link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="{% url 'classes' %}">Classes</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link white t p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Classes</a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
+                                <li><a href="{% url 'classes' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
+                                <li><a href="{% url 'classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
+                                <li><a href="{% url 'classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
+                            </ul>
                         </li>
 
                         <!-- Shop link -->

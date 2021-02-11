@@ -158,6 +158,11 @@ li.list-inline-item.li-item-margin {
     margin-right: 16px;
 }
 
+.letter-dropdown {
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
 /* === Hero homepage === */
 .home-hero-container {
 background: url(/media/lotus-bg.jpg) no-repeat top center fixed;

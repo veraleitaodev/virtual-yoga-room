@@ -1,0 +1,36 @@
+<div class="row mt-3">
+    <div class="col-12">
+        <!-- Breadcrumbs to facilitate navigation - with links to previous pages -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home' %}" class="breadcrumbs-text logo-green pl-2">Home</a></li>
+          
+                <!-- second crumb identifies what category the current item is part of-->
+                {% for category in selected_category %}
+                {% if category.name == category %}
+                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'programs' %}?category={{ category.name }}" 
+                class="breadcrumbs-text  darkpink">{{ category.friendly_name }}</a>
+                    </li>
+                {% else %}
+                    <li class="breadcrumb-item"><a href="{% url 'programs' %}?category={{ category.name }}" 
+                class="breadcrumbs-text  logo-green">{{ category.friendly_name }}</a>
+                    </li>
+                {% endif %}
+                {% endfor %}
+
+                <!-- thrid crumb identifies what yoga program the current item is part of-->
+                {% for program in selected_program %}
+                {% if program.name == program %}
+                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'programs' %}?program={{ program.name }}" 
+                class="breadcrumbs-text  darkpink">{{ program.name }}</a>
+                    </li>
+                {% else %}
+                    <li class="breadcrumb-item"><a href="{% url 'programs' %}?program={{ program.name }}"
+                class="breadcrumbs-text  logo-green">{{ program.name }}</a>
+                    </li>
+                {% endif %}
+                {% endfor %}
+            </ol>
+        </nav>
+    </div>
+</div>
