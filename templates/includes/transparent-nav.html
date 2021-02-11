@@ -157,10 +157,19 @@
                             </ul>
                         </li>
 
-                        <!-- Shop link -->
+                        <!-- Program link -->
                         <li class="nav-item">
                             <a class="nav-link  white p-3" href="">Programs</a>
                         </li>
+                        <!-- Collections link -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link white transparent-nav-item p-3" id="programs-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Programs</a>
+                        <ul class="dropdown-menu bg-black border-0" aria-labelledby="programs-link">
+                            <li><a href="{% url 'products' %}?program=" class="dropdown-item-text text-decoration-none white letter-dropdown"></a></li>
+                            <li><a href="{% url 'products' %}?program=traditions" class="dropdown-item-text text-decoration-none white letter-dropdown">Traditions</a></li>
+                            <li><a href="{% url 'products' %}?program=reflections" class="dropdown-item-text text-decoration-none white letter-dropdown">Reflections</a></li>
+                        </ul>
+                    </li>
 
                         <!-- About link -->
                         <li class="nav-item">

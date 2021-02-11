@@ -21,7 +21,7 @@
             {% for class in classes %}
             <div data-aos="fade-up" class="col-md-4">
                 <div class="card classes-card shadow-lg mb-5 mx-3">
-                    <a href="">
+                    <a href="{% url 'class_details' class.id %}">
                         <img class="card-img-top img-fluid shadow" src="{{ class.image.url }}" alt="{{ class.name }}">
                     </a>
                     <div class="card-body">

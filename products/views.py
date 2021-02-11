@@ -49,7 +49,7 @@ def all_programs(request):
     return render(request, 'products/programs.html', context)
 
 
-def class_detail(request, class_id):
+def class_details(request, class_id):
     """ A view to show individual class details """
     classes = get_object_or_404(Class, pk=class_id)
 
@@ -72,4 +72,4 @@ def class_detail(request, class_id):
         'selected_category': selected_category,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, 'products/class_details.html', context)
