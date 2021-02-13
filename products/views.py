@@ -1,11 +1,15 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Class, Program, Category
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages
+from django.db.models import Q
 
 
 def all_classes(request):
     """ A view to show all classes, including sorting and search queries """
 
+    classes = Class.objects.all()
+    query = None
     class_list = Class.objects.all()
     page = request.GET.get('page', 1)
     selected_category = Category.objects.all()
@@ -19,11 +23,23 @@ def all_classes(request):
     except EmptyPage:
         classes = paginator.page(paginator.num_pages)
 
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(
+                    request, "You didn't enter any search criteria!")
+                return redirect(reverse('classes'))
+
     context = {
         'classes': classes,
         'selected_program': selected_program,
         'selected_category': selected_category,
+        'search_term': query,
     }
+
+    queries = Q(name__icontains=query) | Q(description__icontains=query)
+    classes = classes.filter(queries)
 
     return render(request, 'products/classes.html', context)
 
