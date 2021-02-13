@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Frequently Asked Questions</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center my-3">
+               <h1>{{ question.question_text }}</h1>
+               <ul>
+                {% for choice in question.choice_set.all %}
+                    <li>{{ choicw.choice_text }}</li>
+                {% endfor %}
+               </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
