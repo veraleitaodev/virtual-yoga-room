@@ -1,8 +1,8 @@
  {% load static %}
  <!-- Footer-->
-<footer class="footer bg-logo-green py-4">
+<footer class="footer">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center bg-logo-green py-4">
             <div class="col-lg-4 text-lg-left">Copyright © virtualyogaroom 2021</div>
             <div class="col-lg-4 my-3 my-lg-0">
                 <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
@@ -12,6 +12,14 @@
             <div class="col-lg-4 text-lg-right">
                 <a class="mr-3" href="#!">Privacy Policy</a>
                 <a href="#!">Terms of Use</a>
+            </div>
+        </div>
+        <div class="row bg-black white py-4">
+            <div class="col-lg-4 my-3 my-lg-0">
+                <a class="mx-2" href="{% url 'home' %}">Home |</a>
+                <a class="mx-2" href="">About |</a>
+                <a class="mx-2" href="">Blog |</a>
+                <a class="mx-2" href="{% url 'questions' %}">FAQ</a>
             </div>
         </div>
     </div>
