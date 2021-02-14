@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}Frequently Asked Questions{% endblock %}
+{% block extra_title %}FAQ{% endblock %}
 
 {% block content %}
 <header>
@@ -21,7 +21,7 @@
                 {% if latest_question_list %}
                     <ul>
                         {% for question in latest_question_list %}
-                            <li><a href="/questions/{{ question.id }}/">{{ question.question_text }}</a></li>
+                            <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
                         {% endfor %}
                     </ul>
                 {% else %}
