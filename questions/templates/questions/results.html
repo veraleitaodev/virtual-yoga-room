@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Results</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center my-3">
+                <h1>{{ question.question_text }}</h1>
+
+                <ul>
+                    {% for choice in question.choice_set.all %}
+                    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+                    {% endfor %}
+                </ul>
+
+                <a href="{% url 'detail' question.id %}">Vote again?</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
