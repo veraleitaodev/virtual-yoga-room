@@ -1,33 +1,30 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views import generic
+
 from .models import Question, Choice
 
 
-def faq(request):
-    """ A view to return the frequently asked questions page """
+class FaqView(generic.ListView):
+    """ A  """
 
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]
-    context = {
-        'latest_question_list': latest_question_list,
-    }
+    template_name = 'questions/faq.html'
+    context_object_name = 'latest_question_list'
 
-    return render(request, 'questions/faq.html', context)
-
-
-def detail(request, question_id):
-    """ A view to return the the details page where it is viewed the details
-    of a specific question """
-
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'questions/detail.html', {'question': question})
+    def get_queryset(self):
+        """ Return the last six published questions. """
+        return Question.objects.order_by('pub_date')[:6]
 
 
-def results(request, question_id):
-    """ A view to present the vote results """
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'questions/detail.html'
 
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'questions/results.html', {'question': question})
+
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'questions/results.html'
 
 
 def vote(request, question_id):
