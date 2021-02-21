@@ -163,6 +163,15 @@ li.list-inline-item.li-item-margin {
     letter-spacing: 1.5px;
 }
 
+/*-- Hover --*/
+a.nav-link:hover {
+    color: #819FA6 !important;;
+}
+
+.badge:hover {
+    background-color:#D9B4C8 !important;
+}
+
 /* === Hero homepage === */
 .home-hero-container {
 background: url(/media/lotus-bg.jpg) no-repeat top center fixed;
@@ -193,6 +202,8 @@ width: 100%;
 .card-body.text-center {
     min-height: 180px;
 }
+
+
 
 @media (min-width: 768px) {
   .logo-nav {
