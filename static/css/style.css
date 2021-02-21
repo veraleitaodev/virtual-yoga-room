@@ -172,6 +172,12 @@ a.nav-link:hover {
     background-color:#D9B4C8 !important;
 }
 
+button.btn:hover,
+button strong:hover {
+    color: #0D0D0D;
+    background: transparent !important;
+}
+
 /* === Hero homepage === */
 .home-hero-container {
 background: url(/media/lotus-bg.jpg) no-repeat top center fixed;
