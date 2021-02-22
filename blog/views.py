@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from .models import Blog
 
 
-def blog(request):
-    return render(request, 'blog/blog.html')
+def all_blogs(request):
+    blogs = Blog.objects.all()
+    return render(request, 'blog/blog.html', {'blogs': blogs})
 
 
-def post_details(request):
-    return render(request, 'blog/post-details.html')
+def blog_details(request):
+    return render(request, 'blog/blog-details.html')

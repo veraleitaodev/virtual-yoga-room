@@ -20,7 +20,8 @@ class Category(models.Model):
 
 class Program(models.Model):
 
-    category = models.ForeignKey('Category', null=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category',
+                                 null=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True)
     name = models.CharField(max_length=254)
     description = models.TextField()

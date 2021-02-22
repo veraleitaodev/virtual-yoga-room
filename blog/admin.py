@@ -1,4 +1,14 @@
 from django.contrib import admin
-from .models import Post
+from .models import Blog
 
-admin.site.register(Post)
+
+class BlogAdmin(admin.ModelAdmin):
+    list_display = (
+        'title',
+        'content',
+        'date',
+        'author'
+    )
+
+
+admin.site.register(Blog, BlogAdmin)

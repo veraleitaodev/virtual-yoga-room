@@ -1,14 +1,11 @@
-import datetime
 from django.db import models
-from django.utils import timezone
 
 
-class Post(models.Model):
-    title = models.CharField(max_length=100)
-    summary = models.CharField(max_length=600)
-    content = models.TextField(blank=True)
-    image = models.ImageField(upload_to='media/')
-    url = models.URLField(blank=True)
+class Blog(models.Model):
+    title = models.CharField(max_length=300)
+    content = models.TextField(blank=False)
+    date = models.DateField()
+    author = models.CharField(max_length=150, blank=True)
 
     def __str__(self):
-        return self
+        return self.title
