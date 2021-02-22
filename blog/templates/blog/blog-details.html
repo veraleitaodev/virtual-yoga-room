@@ -13,12 +13,17 @@
 
         <div class="row">
             <div class="col text-center my-3">
-                <h2 class="heading-font heading-item pb-2">Virtual Yoga Blog</h2>
+                <h2 class="heading-font heading-item pb-2">{{ blog.title }}</h2>
             </div>
         </div>
 
         <div class="row pb-3">
-           
+            <div class="col-10 offset-1 mb-5">
+            
+                <div class="mute">{{ blog.date}}</div>
+                <h6 class="mb-3">{{ blog.author }}</h6>
+                <p class="">{{ blog.content }}</p>
+            </div>
         </div>
         
     </div>

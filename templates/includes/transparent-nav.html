@@ -92,7 +92,7 @@
                             <div><i class="fas fa-search white"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
-                            <form class="form" method="GET" action="{% url 'classes' %}">
+                            <form class="form" method="GET" action="{% url 'products:classes' %}">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
@@ -127,12 +127,12 @@
             <div class="container-fluid">
                 
                 <!-- logo with text to display in medium and larger screens -->
-                <a class="navbar-brand white d-none d-md-flex" href="{% url 'home' %}">
+                <a class="navbar-brand white d-none d-md-flex" href="{% url 'home:home' %}">
                     <img src="{% static 'images/logo-white.png' %}"
                         alt="logo" class="logo-nav"/><span class="logo-text d-flex align-items-end pl-2">| Virtual Yoga Room</span>
                 </a>
                 <!-- logo only to display in small screens -->
-                <a class="navbar-brand white d-flex d-md-none" href="{% url 'home' %}">
+                <a class="navbar-brand white d-flex d-md-none" href="{% url 'home:home' %}">
                     <img src="{% static 'images/logo-white.png' %}"
                         alt="logo" class="logo-nav"/>
                 </a>
@@ -151,9 +151,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link white t p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Classes</a>
                             <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
-                                <li><a href="{% url 'classes' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
-                                <li><a href="{% url 'classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
-                                <li><a href="{% url 'classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
+                                <li><a href="{% url 'products:classes' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
+                                <li><a href="{% url 'products:classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
+                                <li><a href="{% url 'products:classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
                             </ul>
                         </li>
 
@@ -162,7 +162,7 @@
                         <a class="nav-link white transparent-nav-item p-3" id="programs-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Programs</a>
                         <ul class="dropdown-menu bg-black border-0" aria-labelledby="programs-link">
                             {% for program in programs %}
-                            <li><a href="{% url 'programs' %}?program={{ program.name }}" class="dropdown-item-text text-decoration-none white letter-dropdown">{{ program.name }}</a></li>
+                            <li><a href="{% url 'products:programs' %}?program={{ program.name }}" class="dropdown-item-text text-decoration-none white letter-dropdown">{{ program.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
@@ -185,7 +185,7 @@
 
                         <!-- Program link -->
                         <li class="nav-item">
-                            <a class="nav-link  white p-3" href="{% url 'faq' %}">FAQ</a>
+                            <a class="nav-link  white p-3" href="{% url 'questions:faq' %}">FAQ</a>
                         </li>
 
 
