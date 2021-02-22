@@ -10,5 +10,7 @@ class BlogAdmin(admin.ModelAdmin):
         'author'
     )
 
+    ordering = ['date']
+
 
 admin.site.register(Blog, BlogAdmin)
