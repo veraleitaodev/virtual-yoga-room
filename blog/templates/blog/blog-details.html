@@ -20,9 +20,9 @@
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-5">
             
-                <div class="mute">{{ blog.date}}</div>
+                <div class="text-small">{{ blog.date}}</div>
                 <h6 class="mb-3">{{ blog.author }}</h6>
-                <p class="">{{ blog.content }}</p>
+                <p class="text-med">{{ blog.content|safe }}</p>
             </div>
         </div>
         

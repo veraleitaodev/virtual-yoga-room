@@ -26,7 +26,8 @@
                 <h3><a href="{% url 'blog:blog_details' blog.id %}" class="text-decoration-none logo-green"><i class="far fa-newspaper mr-1"></i> {{ blog.title }}</a></h3>
                 <div class="mute">{{ blog.date|date:'d M Y'}}</div>
                 <h6>{{ blog.author }}</h6>
-                <p class="">{{ blog.content }}</p>
+                <p class="">{{ blog.content|safe|truncatechars:300 }}</p>
+                 <a class="btn btn-outline-secondary btn-sm shadow-lg" href="{% url 'blog:blog_details' blog.id %}"><strong>read more</strong></a>
                  
             </div>
             {% endfor %}

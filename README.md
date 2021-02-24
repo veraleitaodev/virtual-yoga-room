@@ -7,3 +7,4 @@ In insight, I will improve UX planning before implementing the project to verify
 -  css gradient code from [cssportal.com](https://www.cssportal.com/css-text-gradient-generator/)
 - help in understanding how to use django in a carousel https://stackoverflow.com/questions/30119351/how-to-make-an-object-slider-in-django
 - logo - Wix
+- blog content - https://kripalu.org/about/kripalu/faculty/sat-bir-s-khalsa
