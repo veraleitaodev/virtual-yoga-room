@@ -11,28 +11,43 @@
     <!--Main content-->
     <div class="container-fluid">
 
+        <!--breadcrumbs row with active page-->
+        <div class="row">
+            <div class="col">
+                {% include 'blog/includes/breadcrumbs.html' %}
+            </div>
+        </div>
+
+        <!--title row-->
         <div class="row">
             <div class="col text-center my-3">
                 <h2 class="heading-font heading-item pb-2">Virtual Yoga Blog</h2>
             </div>
         </div>
+
+        <!--blog content summary presented in a loop -  only 300 character displayed of content, button to
+             read more opens to full blog conten on individual page-->
         <div class="row">
-            <p><em>{{ blogs.count }}</em></p>
+            <div class="col-10 offset-1 mb-5">
+                <p><em>{{ blogs.count }} blog{{blogs.count|pluralize}} published  </em><i class="fas fa-meteor pink"></i></p>
+            </div>
         </div>
         <div class="row pb-3">
             {% for blog in blogs %}
             <div class="col-10 offset-1 mb-5">
-                
-                <h3><a href="{% url 'blog:blog_details' blog.id %}" class="text-decoration-none logo-green"><i class="far fa-newspaper mr-1"></i> {{ blog.title }}</a></h3>
-                <div class="mute">{{ blog.date|date:'d M Y'}}</div>
-                <h6>{{ blog.author }}</h6>
+
+                <h3><a href="{% url 'blog:blog_details' blog.id %}" class="text-decoration-none logo-green"><i
+                            class="far fa-newspaper mr-1"></i> {{ blog.title }}</a></h3>
+                <p class="mb-0 text-muted">{{ blog.date|date:'d M Y'}}</p>
+                <p class="text-muted">{{ blog.author }}</p>
                 <p class="">{{ blog.content|safe|truncatechars:300 }}</p>
-                 <a class="btn btn-outline-secondary btn-sm shadow-lg" href="{% url 'blog:blog_details' blog.id %}"><strong>read more</strong></a>
-                 
+                <a class="btn btn-outline-secondary btn-sm shadow-lg"
+                    href="{% url 'blog:blog_details' blog.id %}"><strong>read more</strong></a>
+
             </div>
             {% endfor %}
         </div>
-        
+
     </div>
 </section>
 {% endblock %}

@@ -1,0 +1,23 @@
+<div class="row mt-3">
+    <div class="col-12">
+        <!-- Breadcrumbs to facilitate navigation - with links to previous pages -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home:home' %}" class="breadcrumbs-text logo-green pl-2">Home</a></li>
+          
+                <!-- second crumb - blogs - identifies if blogs is the active page-->
+                
+                {% if blogs == blogs %}
+                    <li class="breadcrumb-item active" aria-current="page"><a href="{% url 'blog:all_blogs' %}" 
+                class="breadcrumbs-text text-decoration-none darkpink">Blog</a>
+                    </li>
+                {% else %}
+                    <li class="breadcrumb-item"><a href="{% url 'blog:all_blogs' %}" 
+                class="breadcrumbs-text  logo-green">Blog</a>
+                    </li>
+                {% endif %}   
+
+            </ol>
+        </nav>
+    </div>
+</div>

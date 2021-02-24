@@ -10,18 +10,27 @@
 <section class="margin-top-navbar">
     <!--Main content-->
     <div class="container-fluid">
+        
+        <!--breadcrumbs row with active page-->
+        <div class="row">
+            <div class="col">
+                {% include 'blog/includes/breadcrumbs.html' %}
+            </div>
+        </div>
 
+        <!--title row-->
         <div class="row">
             <div class="col text-center my-3">
                 <h2 class="heading-font heading-item pb-2">{{ blog.title }}</h2>
             </div>
         </div>
 
+        <!--page content row - content is formated with html when imputted in django admin-->
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-5">
             
-                <div class="text-small">{{ blog.date}}</div>
-                <h6 class="mb-3">{{ blog.author }}</h6>
+                <p class="mb-0 text-muted">{{ blog.date|date:'d M Y'}}</p>
+                <p class="text-muted">{{ blog.author }}</p>
                 <p class="text-med">{{ blog.content|safe }}</p>
             </div>
         </div>
