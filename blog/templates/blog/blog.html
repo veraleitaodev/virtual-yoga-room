@@ -16,13 +16,15 @@
                 <h2 class="heading-font heading-item pb-2">Virtual Yoga Blog</h2>
             </div>
         </div>
-
+        <div class="row">
+            <p><em>{{ blogs.count }}</em></p>
+        </div>
         <div class="row pb-3">
             {% for blog in blogs %}
             <div class="col-10 offset-1 mb-5">
                 
                 <h3><a href="{% url 'blog:blog_details' blog.id %}" class="text-decoration-none logo-green"><i class="far fa-newspaper mr-1"></i> {{ blog.title }}</a></h3>
-                <div class="mute">{{ blog.date}}</div>
+                <div class="mute">{{ blog.date|date:'d M Y'}}</div>
                 <h6>{{ blog.author }}</h6>
                 <p class="">{{ blog.content }}</p>
                  
