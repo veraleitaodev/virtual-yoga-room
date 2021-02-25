@@ -29,8 +29,8 @@
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-5">
             
-                <p class="mb-0 text-muted">{{ blog.date|date:'d M Y'}}</p>
-                <p class="text-muted">{{ blog.author }}</p>
+                <p class="mb-0 text-muted text-center"><small>{{ blog.date|date:'jS M Y'}}</small></p>
+                <p class="text-muted text-center"><small>{{ blog.author }}</small></p>
                 <p class="text-med">{{ blog.content|safe }}</p>
             </div>
         </div>
