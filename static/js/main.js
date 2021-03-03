@@ -17,4 +17,7 @@ $(document).ready(function () {
       }
   });
 
+  // to update the copyright date in the footer
+  $("#copyright").text(new Date().getFullYear());
+
 });
