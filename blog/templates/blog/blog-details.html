@@ -27,11 +27,21 @@
 
         <!--page content row - content is formated with html when imputted in django admin-->
         <div class="row pb-3">
-            <div class="col-10 offset-1 mb-5">
+            <div class="col-10 offset-1 mb-3">
             
                 <p class="mb-0 text-muted text-center"><small>{{ blog.date|date:'jS M Y'}}</small></p>
                 <p class="text-muted text-center"><small>{{ blog.author }}</small></p>
                 <p class="text-med">{{ blog.content|safe }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10 offset-1 mb-5">
+                <form method="POST" action="add">
+                    <p>
+                        <input type="text">
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
             </div>
         </div>
         
