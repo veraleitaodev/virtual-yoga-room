@@ -32,6 +32,9 @@
 </head>
 
   <body>
+     {% for message in messages %}
+    <p class="message">{{ message }}</p>
+    {% endfor %}
     {% block content %}
     {% endblock %}
 
