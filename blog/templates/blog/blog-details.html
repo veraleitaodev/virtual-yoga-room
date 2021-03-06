@@ -37,9 +37,17 @@
         <div class="row">
             <div class="col-10 offset-1 mb-5">
                 <form method="POST" action="add">
+                    {% csrf_token %}
                     <p>
-                        <input type="text">
-                        <input type="submit" value="Submit">
+                        <label for="comment">write here your comment</label>
+                        <input type="text" id="comment" name="new_comment" />
+                    </p>
+                    <p>
+                        <label for="comment_author">name</label>
+                        <input type="text" id="comment_author" name="comment_author">
+                    </p>
+                    <p>
+                        <button type="submit">Add Comment</button>
                     </p>
                 </form>
             </div>
