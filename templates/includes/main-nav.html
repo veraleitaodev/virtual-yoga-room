@@ -151,15 +151,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link white t p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Classes</a>
                             <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
-                                <li><a href="{% url 'products:classes' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
-                                <li><a href="{% url 'products:classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
-                                <li><a href="{% url 'products:classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
+                                <li><a href="{% url 'items:classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
+                                <li><a href="{% url 'items:classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
                             </ul>
                         </li>
 
                         <!-- Programs link -->
                         <li class="nav-item">
-                            <a class="nav-link  white p-3" href="{% url 'products:programs' %}">Programs</a>
+                            <a class="nav-link  white p-3" href="{% url 'items:programs' %}">Programs</a>
                         </li>
 
                         <!-- About link -->

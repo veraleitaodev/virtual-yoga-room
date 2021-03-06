@@ -31,7 +31,7 @@
                     <li class="list-inline-item dropdown">
 
                          <!-- Search Icon with dropdown box-->
-                        <a class="nav-link" href="{% url 'products:classes' " id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link" href="{% url 'items:classes' " id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div><i class="fas fa-search white"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
@@ -92,7 +92,7 @@
                             <div><i class="fas fa-search white"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
-                            <form class="form" method="GET" action="{% url 'products:classes' %}">
+                            <form class="form" method="GET" action="{% url 'items:classes' %}">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
@@ -149,11 +149,10 @@
                         
                         <!-- Classes link -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link white t p-3" id="gallery-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Classes</a>
-                            <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
-                                <li><a href="{% url 'products:classes' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
-                                <li><a href="{% url 'products:classes' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
-                                <li><a href="{% url 'products:classes' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Classes</a></li>
+                            <a class="nav-link white p-3" id="classes-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Classes</a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="classes-link">
+                               <li><a href="{% url 'items:classes' %}" class="dropdown-item text-decoration-none black letter-dropdown">By Program</a></li>
+                                <li><a href="{% url 'items:classes' %}" class="dropdown-item text-decoration-none black letter-dropdown">All Classes</a></li>
                             </ul>
                         </li>
 
@@ -162,7 +161,7 @@
                         <a class="nav-link white transparent-nav-item p-3" id="programs-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Programs</a>
                         <ul class="dropdown-menu bg-black border-0" aria-labelledby="programs-link">
                             {% for program in programs %}
-                            <li><a href="{% url 'products:programs' %}?program={{ program.name }}" class="dropdown-item-text text-decoration-none white letter-dropdown">{{ program.name }}</a></li>
+                            <li><a href="{% url 'items:programs' %}?program={{ program.name }}" class="dropdown-item-text text-decoration-none white letter-dropdown">{{ program.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>

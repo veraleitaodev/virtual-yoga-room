@@ -1,0 +1,152 @@
+[
+    {
+        "pk": 1,
+        "model": "items.program",
+        "fields": {
+            "sku": "BEG-BEG-001",
+            "name": "Beginners Power Yoga",
+            "description": "The Beginner Power Yoga Series is a five class series that progressively teaches the basics of power yoga, an energetic and empowering style of yoga that involves breath, movement, strength, and flexibility.",
+            "number_classes": 5,
+            "category": "Beginners",
+            "instructor": "Daniel Potter",
+            "image": "warrior-sunset.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583590/warrior-sunset_xz740n.jpg",
+            "rating": 4.9
+        }
+    },
+    {
+        "pk": 2,
+        "model": "items.program",
+        "fields": {
+            "sku": "BEG-BAS-001",
+            "name": "Basic Beginner Yoga Program",
+            "description": "provide an introduction to the principles of yoga, basic poses, and proper alignment. You will be encouraged to move at your own pace and move from one class to the next as you see fit and when you're ready.",
+            "number_classes": 7,
+            "instructor": "Ruppert Weasly",
+            "category": "Beginners",
+            "image": "tantra-yoga.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589100/tantra-yoga_wixz5c.jpg",
+            "rating": 5
+        }
+    },
+    {
+        "pk": 3,
+        "model": "items.program",
+        "fields": {
+            "sku": "CHA-14D-001",
+            "name": "14 Day Yoga Challenge for Busy People",
+            "description": "This challenge will make it possible to make yoga a part of your routine, even if it feels like there are not enough hours in the day to get everything you need to done.",
+            "number_classes": 14,
+            "instructor": "Emma Granger",
+            "category": "Challenges",
+            "image": "virtual-yoga-retreat.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589535/virtual-yoga-retreat_xrdoww.jpg",
+            "rating": 4.7
+        }
+    },
+    {
+        "pk": 4,
+        "model": "items.program",
+        "fields": {
+            "sku": "CHA-5DA-001",
+            "name": "5 Day Evening Challenge",
+            "description": "These short 25-30 min classes will help you transition out of your workday so that you can end each day on a high note and begin the next day feeling refreshed and grounded.",
+            "number_classes": 5,
+            "category": "Challenges",
+            "instructor": "Maggie McGonagall",
+            "image": "virtual-meditation-class.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589094/virtual-meditation-class_gizler.jpg",
+            "rating": 4.8
+        }
+    },
+    {
+        "pk": 5,
+        "model": "items.program",
+        "fields": {
+            "sku": "DYN-YOG-001",
+            "name": "Yoga for Weight Loss Program",
+            "description": "By doing vigorous yoga classes five days a week for three weeks straight, you will see a difference in your physique and will lose weight.",
+            "number_classes": 8,
+            "category": "Dynamic",
+            "instructor": "Alan Snape",
+            "image": "pose-3.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583575/pose-3_p0gbrw.jpg",
+            "rating": 4.9
+        }
+    },
+    {
+        "pk": 6,
+        "model": "items.program",
+        "fields": {
+            "sku": "DYN-HAR-001",
+            "name": "Hardcore Yoga Program",
+            "description": "Our HardCORE Yoga Program is a 4-week intensive workout program designed for experienced yoga students, athletes, or anyone looking for a super-intense power yoga home workout.",
+            "number_classes": 10,
+            "category": "Dynamic",
+            "instructor": "Robbie Hagrid",
+            "image": "pose-bw.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589073/pose-bw_yliglv.jpg",
+            "rating": 5
+        }
+    },
+    {
+        "pk": 7,
+        "model": "items.program",
+        "fields": {
+            "sku": "THE-14D-001",
+            "name": "14 Days Yoga - Shoulders and Neck Pain Relief",
+            "description": "This collection of classes will help create both short-term relief and long-term healing to your back, shoulders, neck, and entire upper body.",
+            "number_classes": 14,
+            "category": "Therapeutic",
+            "instructor": "Bonnie Weasley",
+            "image": "pose-2.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612576473/pose-2_fdcm8c.jpg",
+            "rating": 4.6
+        }
+    },
+    {
+        "pk": 8,
+        "model": "items.program",
+        "fields": {
+            "sku": "THE-YOG-001",
+            "name": "Yoga for Better Sleep",
+            "description": "You'll get something unique from each of these calming, restful, enjoyable classes in this package. Pick your favorites and build them into your routine, and watch your sleeping noticeably improve.",
+            "number_classes": 7,
+            "category": "Therapeutic",
+            "instructor": "Evanna Lovegood",
+            "image": "pose-4.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612583589/pose-4_lyi8wt.jpg",
+            "rating": 4.9
+        }
+    },
+    {
+        "pk": 9,
+        "model": "items.program",
+        "fields": {
+            "sku": "REL-REL-001",
+            "name": "Relaxing Yoga at Home",
+            "description": "This multi-day Restorative yoga immersion will help you de-stress, become more flexible, and guide you towards optimal health and well-being.",
+            "number_classes": 5,
+            "category": "Relax and Restore",
+            "instructor": "Matthew Longbottom",
+            "image": "pose-bw.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589073/pose-bw_yliglv.jpg",
+            "rating": 4.9
+        }
+    },
+    {
+        "pk": 10,
+        "model": "items.program",
+        "fields": {
+            "sku": "REL-YIN-001",
+            "name": "Yin Yoga",
+            "description": "Yin Yoga offers the chance to be still, be present, and work within, to deeply create more space in both the mind and body.",
+            "number_classes": 9,
+            "category": "Relax and Restore",
+            "instructor": "Katie Chang",
+            "image": "back-beach.jpg",
+            "image_url": "https://res.cloudinary.com/veraleitao/image/upload/v1612589033/back-beach_xihny8.jpg",
+            "rating": 4.9
+        }
+    }
+]
