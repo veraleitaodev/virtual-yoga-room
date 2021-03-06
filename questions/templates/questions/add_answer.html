@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Frequently Asked Questions{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Frequently Asked Questions</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center my-3">
+                <!--display question -->
+                <h1>{{ question.question_text }}</h1>
+                {% if error_message %}
+                    <p><strong>{{ error_message }}</strong></p>
+                {% else %}
+                    <form method="POST" action="add">
+                        <div>
+                            <p>
+                                <label for="answer">Answer</label>
+                                <input type="text" id="answer_text" name="answer_text" />
+                            </p>
+                            <p>
+                                <label for="author">Name</label>
+                                <input type="text" id="answer_author" name="answer_author" />
+                            </p>
+                        </div>
+                        
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
