@@ -41,7 +41,7 @@
                 <p class="mb-0 text-muted">{{ blog.date|date:'d M Y'}}</p>
                 <p class="text-muted">{{ blog.author }}</p>
                 <p class="">{{ blog.content|safe|truncatechars:300 }}</p>
-                <a class="btn btn-outline-secondary btn-sm shadow-lg"
+                <a class="btn btn-outline-secondary btn-sm shadow-sm"
                     href="{% url 'blog:blog_details' blog.id %}"><strong>read more</strong></a>
 
             </div>

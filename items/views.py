@@ -8,7 +8,7 @@ from django.db.models import Q
 def all_classes(request):
     """ A view to show all items, including sorting and search queries """
 
-    classes = Class.objects.all()
+    """classes = Class.objects.all()
     query = None
     programs = None
     sort = None
@@ -53,6 +53,12 @@ def all_classes(request):
         'search_term': query,
         'current_programs': programs,
         'current_sorting': current_sorting,
+    }
+"""
+
+    classes = Class.objects.all()
+    context = {
+        'classes': classes
     }
 
     return render(request, 'items/classes.html', context)
