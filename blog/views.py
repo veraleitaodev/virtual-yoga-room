@@ -10,11 +10,11 @@ def all_blogs(request):
 
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
+    comments = post.comments.filter(active=True)
     context = {
         'blog': blog,
     }
     return render(request, 'blog/blog-details.html', context)
-
 
 
 def add_comments(request):
