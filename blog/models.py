@@ -12,10 +12,9 @@ class Blog(models.Model):
 
 
 class Comment(models.Model):
-    blog = models.ForeignKey(
-        Blog, on_delete=models.CASCADE, related_name='comments')
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name='comments')
     body = models.CharField(max_length=300, null=False, blank=False)
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
     name = models.CharField(max_length=150, blank=True)
     active = models.BooleanField(default=False)
 

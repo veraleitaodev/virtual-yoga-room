@@ -1,5 +1,5 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Blog, Comment
+from django.shortcuts import render, get_object_or_404
+from .models import Blog
 from .forms import CommentForm
 
 
@@ -10,8 +10,10 @@ def all_blogs(request):
 
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    comments = blog.comments.filter(active=True)
+    comments = blog.comments.filter(active=True).order_by("-date")
     new_comment = None
+    comment_form = CommentForm()
+
     # comment posted
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
@@ -27,11 +29,9 @@ def blog_details(request, blog_id):
         else:
             comment_form = CommentForm()
 
-    context = {
+    return render(request, 'blog/blog-details.html', {
         'blog': blog,
         'comments': comments,
-        'new_comment': new_comment,
-        'comment_form': comment_form
-    }
-
-    return render(request, 'blog/blog-details.html', context)
+        'comment_form': comment_form,
+        'new_comment': new_comment
+    })

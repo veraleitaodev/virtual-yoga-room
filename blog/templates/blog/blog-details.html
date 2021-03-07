@@ -35,22 +35,36 @@
             </div>
         </div>
         <div class="row pb-3">
-            <!--display of all comments related to the post-->
-            {%for post in form %}
-                {% if post.comment %}
-                    <div class="col-10 offset-1 mb-3">
-                        <p>{{ post.comment }}</p>
-                        <p>{{ post.name }}</p>
-                        <p>{{ post.date }}</p>  
-                    </div>
-                {% else %}
-                    <div class="col-10 offset-1 mb-3">
-                        <p>There are no comments yet</p> 
-                    </div>
-                {% endif %}
-            {% endfor %}
             <div class="col-10 offset-1 mb-5">
-                <a class="btn btn-outline-secondary btn-sm shadow-sm" href="">Add a Comment</a>
+                <p><em>{{ comments.count }} comment{{comments.count|pluralize}}</em><i class="fas fa-meteor pink"></i></p>
+
+                <!--display of all comments related to the post-->
+                {% for comment in comments %}
+
+                    <p>{{ comment.body | safe | linebreaks }}</p>
+                    <p class="text-muted"><small>{{ comment.name }}</small></p>
+                    <p class="text-muted"><small>{{ blog.date|date:'D M Y'}}</small></p> 
+            
+                {% endfor %}
+            </div>
+
+            <div class="col-10 offset-1 mb-5">
+                <div class="card-body">
+                    {% if new_comment %}
+                        <div class="alert alert-success" role="alert">
+                            Your comment is waiting moderation
+                        </div>
+                    {% else %}
+                        <p class="text-decoration-none logo-green"><i class="far fa-edit mr-1"></i> Leave a comment</p>
+                        <div>
+                            <form method="POST">
+                                {{ comment_form.as_p }}
+                                {% csrf_token %}
+                                    <button type="submit" class="btn bg-white dark-pink btn shadow">Submit</button>
+                            </form>
+                        </div>
+                    {% endif%}
+                </div>
             </div>
         </div>
         

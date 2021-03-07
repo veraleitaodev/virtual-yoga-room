@@ -204,11 +204,16 @@ width: 100%;
     margin-top: 150px;
 }
 
-/*=== Cards ===*/
+/*--- Cards ---*/
 .card-body.text-center {
     min-height: 180px;
 }
 
+/*=== form at blog details ===*/
+input#id_body,
+input#id_name {
+   border: 1px solid #0D0D0D !important;
+}
 
 
 @media (min-width: 768px) {
