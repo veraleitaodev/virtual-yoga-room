@@ -12,10 +12,14 @@ class Blog(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Blog, on_delete=models.CASCADE)
-    comment = models.CharField(max_length=300, null=False, blank=False)
+    post = models.ForeignKey(
+        Blog, on_delete=models.CASCADE, related_name='comments')
+    body = models.CharField(max_length=300, null=False, blank=False)
     date = models.DateField()
     name = models.CharField(max_length=150, blank=True)
 
+    class Meta:
+        ordering = ['date']
+
     def __str__(self):
-        return self.name
+        return 'Comment {} by {}'.format(self.body, self.name)
