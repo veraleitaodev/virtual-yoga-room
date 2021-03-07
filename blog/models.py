@@ -12,7 +12,7 @@ class Blog(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(
+    blog = models.ForeignKey(
         Blog, on_delete=models.CASCADE, related_name='comments')
     body = models.CharField(max_length=300, null=False, blank=False)
     date = models.DateField()

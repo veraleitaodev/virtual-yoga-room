@@ -10,21 +10,28 @@ def all_blogs(request):
 
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
-    comments = post.comments.filter(active=True)
+    comments = blog.comments.filter(active=True)
+    new_comment = None
+    # comment posted
+    if request.method == 'POST':
+        comment_form = CommentForm(data=request.POST)
+
+        if comment_form.is_valid():
+
+            # Create Comment object but does not save to db
+            new_comment = comment_form.save(commit=False)
+            # assign the current blog to the comment
+            new_comment.blog = blog
+            # save the comment to the db
+            new_comment.save()
+        else:
+            comment_form = CommentForm()
+
     context = {
         'blog': blog,
+        'comments': comments,
+        'new_comment': new_comment,
+        'comment_form': comment_form
     }
+
     return render(request, 'blog/blog-details.html', context)
-
-
-def add_comments(request):
-    if request.method == 'POST':
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            form.save()
-        return redirect('blog/blog-details.html')
-    form = CommentForm()
-    context = {
-        'form': form,
-    }
-    return render(request, 'blog/add-comment.html', context)
