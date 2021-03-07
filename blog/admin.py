@@ -15,10 +15,17 @@ class BlogAdmin(admin.ModelAdmin):
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = (
-        'comment',
+        'body',
         'name',
-        'date'
+        'date',
+        'active'
     )
+    list_filter = ('active', 'date')
+    search_fields = ('name', 'body')
+    actions = ['approve_comments']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(active=True)
 
 
 admin.site.register(Blog, BlogAdmin)
