@@ -17,6 +17,7 @@ class Comment(models.Model):
     body = models.CharField(max_length=300, null=False, blank=False)
     date = models.DateField()
     name = models.CharField(max_length=150, blank=True)
+    active = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['date']
