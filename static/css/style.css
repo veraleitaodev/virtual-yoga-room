@@ -205,8 +205,12 @@ width: 100%;
 }
 
 /*--- Cards ---*/
-.card-body.text-center {
-    min-height: 180px;
+.card-text {
+    min-height: 80px;
+}
+
+h5.card-title {
+    min-height: 56px;
 }
 
 /*=== form at blog details ===*/
