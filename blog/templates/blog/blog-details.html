@@ -40,8 +40,9 @@
 
                 <!--display of all comments related to the post-->
                 {% for comment in comments %}
-
-                    <p>{{ comment.body | safe | linebreaks }}</p>
+                    {% autoescape on %}
+                        <p>{{ comment.body }}</p>
+                    {% endautoescape %}
                     <p class="text-muted"><small>{{ comment.name }}</small></p>
                     <p class="text-muted"><small>{{ blog.date|date:'D M Y'}}</small></p> 
             
