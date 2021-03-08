@@ -1,18 +1,18 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .models import Class, Program
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from django.contrib import messages
-from django.db.models import Q
+# from django.contrib import messages
+# from django.db.models import Q
 
 
 def all_classes(request):
     """ A view to show all items, including sorting and search queries """
 
     classes = Class.objects.all()
-    query = None
-    programs = Program.objects.all()
-    sort = None
-    direction = None
+    # query = None
+    # programs = Program.objects.all()
+    # sort = None
+    # direction = None
 
     context = {
         'classes': classes
@@ -66,7 +66,7 @@ def all_classes(request):
 
 def all_programs(request):
     """ A view to show all programs, including sorting and search queries """
-
+    programs = Program.objects.all()
     program_list = Program.objects.all()
     page = request.GET.get('page', 1)
 
@@ -80,6 +80,8 @@ def all_programs(request):
 
     context = {
         'programs': programs,
+        'program_list': program_list,
+        'page': page
     }
 
     return render(request, 'items/programs.html', context)

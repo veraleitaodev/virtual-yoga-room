@@ -32,10 +32,10 @@
                     </a>
                     <div class="card-body">
                         <h5 class="card-title pb-2">{{ program.name }}</h5>
-                        <p class="card-text text-md">{{ program.description|safe|truncatechars:100 }}.
+                        <p class="card-text text-md">{{ program.description|safe|truncatewords:10 }}.
                             <span>
                                 <a class="btn btn-outline-secondary btn-sm shadow-sm"
-                                    href="{% url 'blog:blog_details' blog.id %}">
+                                    href="">
                                     <strong>read more</strong>
                                 </a>
                             </span>
