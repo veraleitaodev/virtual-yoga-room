@@ -10,16 +10,20 @@
 <section class="margin-top-navbar">
     <!--Main content-->
     <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                {% include 'items/includes/breadcrumbs.html' %}
+            </div>
+        </div>
 
         <div class="row">
             <div class="col text-center my-3">
                 <h2 class="heading-font heading-item pb-2">Virtual Yoga Programs</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center my-3">
-                <p><em>{{ program.count }} program{{program.count|pluralize}}</em><i class="fas fa-spa pink ms-1"></i>
-                </p>
+        <div class="row bg-light shadow-lg text-center my-3 mx-3">
+            <div class="col my-3">
+                <p class="lead">Here you find all the Programs currently available. Start with the program that best suits your needs.</p>
             </div>
         </div>
         <div class="row pb-3">
@@ -32,14 +36,11 @@
                     </a>
                     <div class="card-body">
                         <h5 class="card-title text-center pb-2">{{ program.name }}</h5>
-                        <p class="card-text text-md">{{ program.description|safe|truncatewords:10 }}.
-                            <span>
-                                <a class="btn btn-outline-secondary btn-sm shadow-sm"
-                                    href="">
-                                    <strong>read more</strong>
-                                </a>
-                            </span>
-                        </p>
+                        <p class="card-text text-md">{{ program.description|safe|truncatewords:20 }}</p>
+                        <a class="btn btn-outline-secondary btn-sm shadow-sm" href="">
+                            <strong>read more</strong>
+                        </a>
+
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">{{ program.number_classes }} classes</li>
@@ -59,17 +60,17 @@
 
         <!-- Pagination added based on bootstrap and django documentation -->
         <nav aria-label="Page navigation example">
-            {% if classes.has_other_pages %}
+            {% if programs.has_other_pages %}
             <ul class="pagination d-flex justify-content-center">
-                {% if classes.has_previous %}
+                {% if programs.has_previous %}
                 <li class="page-item"><a class="page-link logo-green"
-                        href="?page={{ classes.previous_page_number }}">&laquo;</a></li>
+                        href="?page={{ programs.previous_page_number }}">&laquo;</a></li>
                 {% else %}
                 <li class="page-item disabled">
                     <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span>&laquo;</span></a>
                 </li>
                 {% endif %}
-                {% for i in classes.paginator.page_range %}
+                {% for i in programs.paginator.page_range %}
                 {% if classes.number == i %}
                 <li class="page-item active" aria-current="page">
                     <a class="page-link bg-logo-green active-borders" href="#"><span class="white">{{ i }} <span
@@ -84,7 +85,7 @@
                 {% endfor %}
                 {% if classes.has_next %}
                 <li class="page-item">
-                    <a class="page-link logo-green" href="?page={{ classes.next_page_number }}">&raquo;</a>
+                    <a class="page-link logo-green" href="?page={{ programs.next_page_number }}">&raquo;</a>
                 </li>
                 {% else %}
                 <li class="page-item disabled">

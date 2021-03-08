@@ -9,14 +9,16 @@ def all_classes(request):
     """ A view to show all items, including sorting and search queries """
 
     classes = Class.objects.all()
+    classes_page = classes
     # query = None
     # programs = Program.objects.all()
     # sort = None
     # direction = None
 
     context = {
-        'classes': classes
-    }
+        'classes': classes,
+        'classes-page': classes_page
+        }
 
     # if request.GET:
     #     if 'sort' in request.GET:
