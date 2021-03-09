@@ -38,6 +38,19 @@ def all_classes(request):
     return render(request, 'items/classes.html', context)
 
 
+def program_details(request, program_id):
+    """ A view to show individual program details """
+
+    program = get_object_or_404(Program, pk=program_id)
+    selected_classes = program.class_set.all()
+    context = {
+        'program': program,
+        'selected_classes': selected_classes,
+    }
+
+    return render(request, 'items/program-details.html', context)
+
+
 def class_details(request, class_id):
     """ A view to show individual class details """
     item = get_object_or_404(Class, pk=class_id)
@@ -45,15 +58,4 @@ def class_details(request, class_id):
         'item': item,
     }
 
-    return render(request, 'items/class_details.html', context)
-
-
-def program_details(request, program_id):
-    """ A view to show individual program details """
-
-    program = get_object_or_404(Program, pk=program_id)
-    context = {
-        'program': program,
-    }
-
-    return render(request, 'items/program_details.html', context)
+    return render(request, 'items/class-details.html', context)
