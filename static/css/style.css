@@ -89,6 +89,15 @@ body {
     background-color: #718C49 !important;
 }
 
+.offwhite {
+    color: #f5f5f5 !important;
+}
+
+.bg-offwhite {
+    background-color: #f5f5f5 !important;
+}
+
+
 /* !important is used in order to override bootstrap colour settings */
 
 .transparent {
@@ -204,9 +213,14 @@ width: 100%;
     margin-top: 150px;
 }
 
-/*--- Cards ---*/
+/*=== Cards ===*/
 .card-text {
     min-height: 80px;
+}
+
+.small-btn {
+    height: 70%;
+    width: 70%;
 }
 
 h5.card-title {
@@ -219,11 +233,23 @@ input#id_name {
    border: 1px solid #0D0D0D !important;
 }
 
+/*=== Program Details page ==*/
+
+#programDetailRow {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
 
 @media (min-width: 768px) {
-  .logo-nav {
-    max-width: 40px;
-}
+    .logo-nav {
+        max-width: 40px;
+    }
+
+    #programDetailRow {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
 }
 
 @media (min-width: 992px) {
