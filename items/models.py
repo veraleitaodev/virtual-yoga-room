@@ -1,6 +1,13 @@
 from django.db import models
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=254, null=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Program(models.Model):
     CATEGORY = (
         ('Beginners', 'Beginners'),
@@ -11,7 +18,7 @@ class Program(models.Model):
 
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    category = models.CharField(max_length=254, choices=CATEGORY)
+    category = models.CharField(max_length=254, null=True, choices=CATEGORY)
     description = models.TextField()
     number_classes = models.IntegerField()
     image_url = models.URLField(max_length=1024, blank=True)

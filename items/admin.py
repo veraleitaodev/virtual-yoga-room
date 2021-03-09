@@ -2,22 +2,6 @@ from django.contrib import admin
 from .models import Class, Program
 
 
-class ClassAdmin(admin.ModelAdmin):
-    list_display = (
-        'sku',
-        'name',
-        'program',
-        'video',
-        'image',
-        'image_url',
-        'description',
-        'rating',
-        'instructor'
-    )
-
-    ordering = ('sku',)
-
-
 class ProgramAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -34,5 +18,20 @@ class ProgramAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-admin.site.register(Class, ClassAdmin)
+class ClassAdmin(admin.ModelAdmin):
+    list_display = (
+        'sku',
+        'name',
+        'program',
+        'video',
+        'image',
+        'image_url',
+        'description',
+        'rating',
+        'instructor'
+    )
+
+    ordering = ('sku',)
+
 admin.site.register(Program, ProgramAdmin)
+admin.site.register(Class, ClassAdmin)
