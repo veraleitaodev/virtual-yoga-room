@@ -10,10 +10,9 @@ class Tag(models.Model):
 
 class Program(models.Model):
     CATEGORY = (
-        ('Beginners', 'Beginners'),
-        ('Challenges', 'Challenges'),
-        ('Dynamic', 'Dynamic'),
-        ('Therapeutic', 'Therapeutic')
+        ('Easy', 'Easy'),
+        ('Moderate', 'Moderate'),
+        ('Hard', 'Hard')
     )
 
     sku = models.CharField(max_length=254)
