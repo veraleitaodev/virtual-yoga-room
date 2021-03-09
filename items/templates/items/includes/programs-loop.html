@@ -1,0 +1,37 @@
+<div class="row pb-3">
+    {% for program in programs %}
+    <div data-aos="fade-up" class="col-md-10 offset-1">
+        <div class="card classes-card shadow-lg mb-5 mx-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <a href="{% url 'items:program_details' program.id %}">
+                        <img class="card-img-top img-fluid shadow" src="{{ program.image.url }}"
+                            alt="{{ program.name }}">
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title text-center pb-2">{{ program.name }}</h5>
+                        <p class="card-text text-md">{{ program.description|safe|truncatewords:20 }}</p>
+                        <a class="btn btn-outline-secondary btn-sm shadow-sm" href="">
+                            <strong>read more</strong>
+                        </a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{ program.number_classes }} classes</li>
+                            <li class="list-group-item text-muted">{{ program.instructor }}</li>
+                            <li class="list-group-item"><small class="text-muted logo-green"><i
+                                        class="fas fa-star logo-green pr-2"></i> {{ program.rating }} /
+                                    5</small></li>
+                        </ul>
+                        <div class="card-body d-flex justify-content-evenly my-2">
+                            <a href="#" class="btn bg-pink text-center shadow mr-3">Start Now</a>
+                            <a href="#" class="btn btn-outline-dark text-center "><small>More Info</small></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
