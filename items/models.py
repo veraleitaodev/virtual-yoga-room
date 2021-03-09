@@ -26,6 +26,7 @@ class Program(models.Model):
     rating = models.DecimalField(
         max_digits=6, decimal_places=1, null=True, blank=True)
     instructor = models.CharField(max_length=254)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.name
