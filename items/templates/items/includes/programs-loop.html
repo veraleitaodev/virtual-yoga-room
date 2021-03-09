@@ -2,7 +2,7 @@
 
     <!-- loop iterating through 6 programs in each page -->
     {% for program in programs %}
-    <div data-aos="fade-up" class="col-md-10 justify-content-center">
+    <div data-aos="fade-up" class="col-12 justify-content-center">
         <div class="card classes-card shadow-lg mb-5 mx-3 g-0">
             <div class="row mx-1">
                 <div class="col-md-5 mt-3">
@@ -12,15 +12,14 @@
                     </a>
                 </div>
                 <div class="col-md-7">
-                    <div class="card-body">
+                    <div class="card-body px-0">
                         <h5
-                            class="card-title bg-logo-green d-flex align-items-center justify-content-center white pb-2">
+                            class="card-title bg-logo-green d-flex align-items-center justify-content-center text-center white px-1 py-2">
                             {{ program.name }}</h5>
-                        <p class="card-text text-md d-none d-md-flex">{{ program.description|safe|truncatewords:100 }}
-                            <a class="text-decoration-none dark-pink text-shadow ms-1" href="">
-                                <strong>read more</strong>
-                            </a>
-                        </p>
+                        <p class="card-text text-md d-none d-md-flex">{{ program.description|safe|truncatewords:100 }}</p>
+                        <a class="text-decoration-none dark-pink text-shadow ms-1" href="">
+                            <strong>read more</strong>
+                        </a>
                     </div>
                 </div>
             </div>
