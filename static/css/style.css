@@ -215,7 +215,7 @@ width: 100%;
 
 /*=== Cards ===*/
 .card-text {
-    min-height: 80px;
+    min-height: 50px;
 }
 
 .small-btn {
