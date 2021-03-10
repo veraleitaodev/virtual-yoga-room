@@ -14,6 +14,16 @@
         <!-- breadcrumbs to navigate back to hompage or go to classes -->
         {% include 'items/includes/breadcrumbs.html' %}
 
+         <!-- classes count -->
+        <div class="row">
+            <div class="col my-3">
+                <p>
+                    <i class="fas fa-spa pink mr-1"></i>
+                    <em>Total of {{ classes_count }} class{{ classes_count|pluralize }} available </em>
+                </p>
+            </div>
+        </div>
+
         <!-- page heading -->
         <div class="row">
             <div class="col text-center my-3">

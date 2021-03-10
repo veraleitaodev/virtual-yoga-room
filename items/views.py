@@ -30,6 +30,7 @@ def all_classes(request):
     """ A view to show all classes, including sorting and search queries """
 
     classes = Class.objects.all()
+    classes_count = classes.count()
     page = request.GET.get('page', 1)
 
     paginator = Paginator(classes, 6)
@@ -42,6 +43,7 @@ def all_classes(request):
 
     context = {
         'classes': classes,
+        'classes_count': classes_count,
         'page': page
     }
 
