@@ -6,6 +6,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def all_programs(request):
     """ A view to show all programs, including sorting and search queries """
     programs = Program.objects.all()
+    program_count = programs.count()
     page = request.GET.get('page', 1)
 
     paginator = Paginator(programs, 4)
@@ -18,6 +19,7 @@ def all_programs(request):
 
     context = {
         'programs': programs,
+        'program_count': program_count,
         'page': page
     }
 
