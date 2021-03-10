@@ -8,7 +8,7 @@ def all_programs(request):
     programs = Program.objects.all()
     page = request.GET.get('page', 1)
 
-    paginator = Paginator(programs, 6)
+    paginator = Paginator(programs, 4)
     try:
         programs = paginator.page(page)
     except PageNotAnInteger:
@@ -25,15 +25,23 @@ def all_programs(request):
 
 
 def all_classes(request):
-    """ A view to show all items, including sorting and search queries """
+    """ A view to show all classes, including sorting and search queries """
 
     classes = Class.objects.all()
-    classes_page = classes
+    page = request.GET.get('page', 1)
+
+    paginator = Paginator(classes, 6)
+    try:
+        classes = paginator.page(page)
+    except PageNotAnInteger:
+        classes = paginator.page(1)
+    except EmptyPage:
+        classes = paginator.page(paginator.num_pages)
 
     context = {
         'classes': classes,
-        'classes-page': classes_page
-        }
+        'page': page
+    }
 
     return render(request, 'items/classes.html', context)
 
