@@ -42,6 +42,8 @@ def all_classes(request):
     sort = None
     direction = None
 
+    current_sorting = f'{sort}_{direction}'
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -66,7 +68,7 @@ def all_classes(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             classes = classes.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
+    
 
     try:
         classes = paginator.page(page)
