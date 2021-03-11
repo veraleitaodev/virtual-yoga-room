@@ -35,7 +35,7 @@
                             <div><i class="fas fa-search white"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
-                            <form class="form" method="GET" action="{% url 'items:classes' %}">
+                            <form class="form" method="GET" action="{% url 'items:lectures' %}">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
@@ -92,7 +92,7 @@
                             <div><i class="fas fa-search white"></i></div>
                         </a>
                         <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
-                            <form class="form" method="GET" action="{% url 'items:classes' %}">
+                            <form class="form" method="GET" action="{% url 'items:lectures' %}">
                                 <div class="input-group w-100">
                                     <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
                                     <div class="input-group-append">
@@ -147,9 +147,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
                         
-                        <!-- Classes link -->
+                        <!-- lectures link -->
                         <li class="nav-item">
-                            <a class="nav-link white p-3" href="{% url 'items:classes' %}">Classes</a>
+                            <a class="nav-link white p-3" href="{% url 'items:lectures' %}">lectures</a>
                         </li>
 
                         <!-- Programs link -->

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}Classes{% endblock %}
+{% block extra_title %} Lectures {% endblock %}
 
 {% block content %}
 <header>
@@ -11,15 +11,15 @@
     <!--Main content-->
     <div class="container-fluid">
 
-        <!-- breadcrumbs to navigate back to hompage or go to classes -->
+        <!-- breadcrumbs to navigate back to hompage or go to lectures -->
         {% include 'items/includes/breadcrumbs.html' %}
 
-         <!-- classes count -->
+         <!-- lectures count -->
         <div class="row">
             <div class="col my-3">
                 <p>
                     <i class="fas fa-spa pink mr-1"></i>
-                    <em>Total of {{ classes_count }} classes available </em>
+                    <em>Total of {{ lectures_count }} lectures available </em>
                 </p>
             </div>
         </div>
@@ -27,42 +27,42 @@
         <!-- page heading -->
         <div class="row">
             <div class="col text-center my-3">
-                <h2 class="heading-font heading-item pb-2">Virtual Yoga Classes</h2>
+                <h2 class="heading-font heading-item pb-2">Virtual Yoga lectures</h2>
             </div>
         </div>
 
         <!-- informative banner with text hidden for mobile view-->
         <div class="row bg-light shadow-lg my-3 mx-3">
             <div class="col-12 my-3">
-                <p class="lead d-none d-md-flex ps-2">Here you find all the classes currently available. Have a look to
+                <p class="lead d-none d-md-flex ps-2">Here you find all the lectures currently available. Have a look to
                     see what class
                     inspires you the most and then stat on that class or the complete program.</p>
             </div>
         </div>
 
         <!-- display of programs cards in a loop -->
-        {% include 'items/includes/classes-loop.html' %}
+        {% include 'items/includes/lectures-loop.html' %}
 
         <!-- Pagination added based on bootstrap and django documentation -->
         <nav aria-label="Page navigation example">
-            {% if classes.has_other_pages %}
+            {% if lectures.has_other_pages %}
             <ul class="pagination d-flex justify-content-center">
-                {% if classes.has_previous %}
+                {% if lectures.has_previous %}
                     <li class="page-item"><a class="page-link logo-green"
-                            href="?page={{ classes.previous_page_number }}">&laquo;</a></li>
+                            href="?page={{ lectures.previous_page_number }}">&laquo;</a></li>
                 {% else %}
                     <li class="page-item disabled">
                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span>&laquo;</span></a>
                     </li>
                 {% endif %}
 
-                {% for i in classes.paginator.page_range %}
-                    {% if classes.number == i %}
+                {% for i in lectures.paginator.page_range %}
+                    {% if lectures.number == i %}
                         <li class="page-item active" aria-current="page">
                             <span class="page-link bg-logo-green active-borders white">{{ i }} <span
                                         class="sr-only">(current)</span></span>
                         </li>
-                    {% elif i > classes.number|add:'-3' and i < classes.number|add:'3' %}
+                    {% elif i > lectures.number|add:'-3' and i < lectures.number|add:'3' %}
 
                         <li class="page-item">
                             <a class="page-link logo-green" href="?page={{ i }}">{{ i }}</a>
@@ -70,9 +70,9 @@
                     {% endif %}
                 {% endfor %}
 
-                {% if classes.has_next %}
+                {% if lectures.has_next %}
                 <li class="page-item">
-                    <a class="page-link logo-green" href="?page={{ classes.next_page_number }}">&raquo;</a>
+                    <a class="page-link logo-green" href="?page={{ lectures.next_page_number }}">&raquo;</a>
                 </li>
                 {% else %}
                 <li class="page-item disabled">

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tag, Program, Class
+from .models import Tag, Program, Lecture
 
 
 class ProgramAdmin(admin.ModelAdmin):
@@ -7,7 +7,7 @@ class ProgramAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
-        'number_classes',
+        'number_lectures',
         'rating',
         'instructor'
     )
@@ -15,7 +15,7 @@ class ProgramAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-class ClassAdmin(admin.ModelAdmin):
+class LectureAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -28,5 +28,5 @@ class ClassAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Program, ProgramAdmin)
-admin.site.register(Class, ClassAdmin)
+admin.site.register(Lecture, LectureAdmin)
 admin.site.register(Tag)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from items.models import Class, Program
+from items.models import Lecture, Program
 # Create your views here.
 
 
@@ -7,10 +7,10 @@ def index(request):
     """ A view to return the index page """
 
     program = Program.objects.all()
-    classes_section = Class.objects.all()
+    lectures_section = Lecture.objects.all()
     programs_section = Program.objects.all()
     context = {
-        'classes_section': classes_section,
+        'lectures_section': lectures_section,
         'programs_section': programs_section,
         'program': program,
     }

@@ -19,7 +19,7 @@ class Program(models.Model):
     name = models.CharField(max_length=254)
     category = models.CharField(max_length=254, null=True, choices=CATEGORY)
     description = models.TextField()
-    number_classes = models.IntegerField()
+    number_lectures = models.IntegerField()
     image_url = models.URLField(max_length=1024, blank=True)
     image = models.ImageField()
     rating = models.DecimalField(
@@ -31,9 +31,7 @@ class Program(models.Model):
         return self.name
 
 
-class Class(models.Model):
-    class Meta:
-        verbose_name_plural = 'Classes'
+class Lecture(models.Model):
 
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)

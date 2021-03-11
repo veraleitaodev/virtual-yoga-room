@@ -3,7 +3,7 @@
     <!-- loop iterating through 4 programs in each page -->
     {% for program in programs %}
     <div data-aos="fade-up" class="col-12 justify-content-center">
-        <div class="card classes-card shadow-lg mb-5 mx-3 g-0">
+        <div class="card lectures-card shadow-lg mb-5 mx-3 g-0">
             <div class="row mx-1">
                 <div class="col-md-5 mt-3">
                     <a href="{% url 'items:program_details' program.id %}">
@@ -27,7 +27,7 @@
                 <div class="col">
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item text-center">{{ program.number_classes }} classes</li>
+                            <li class="list-group-item text-center">{{ program.number_lectures }} lectures</li>
                             <li class="list-group-item text-center text-muted">{{ program.instructor }}</li>
                             <li class="list-group-item text-center">
                                 <small class="text-muted logo-green"><i class="fas fa-star logo-green pr-2"></i>

@@ -11,7 +11,7 @@
     <!--Main content-->
     <div class="container-fluid">
         
-        <!-- breadcrumbs to navigate back to hompage or go to classes -->
+        <!-- breadcrumbs to navigate back to hompage or go to lectures -->
         {% include 'items/includes/breadcrumbs.html' %}
 
         <!-- programs count -->
@@ -36,6 +36,11 @@
             <div class="col-12 my-3">
                 <p class="lead d-none d-md-flex ps-2">Here you find all the Programs currently available. Start with the program that best
                     suits your needs.</p>
+                {% for c in categories %}
+                    <a class="category-badge text-decoration-none" href="{% url 'items:programs' %}?sort=category&direction=asc">
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_ }}</span>
+                    </a>
+                {% endfor %}
             </div>
         </div>
 

@@ -1,11 +1,11 @@
 [
     {
         "pk": 1,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BEG-001-CLA-001",
-            "name": "Class 1 - Foundation",
-            "description": "Class 1 is is all about building a strong power yoga foundation by learning safe physical alignment, deep breathing and flow.",
+            "name": "Lecture 1 - Foundation",
+            "description": "lecture 1 is is all about building a strong power yoga foundation by learning safe physical alignment, deep breathing and flow.",
             "video": "",
             "program": 1,
             "instructor": "Daniel Potter",
@@ -15,11 +15,11 @@
         }
     }, {
         "pk": 2,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BEG-001-CLA-002",
-            "name": "Class 2 - Alignment",
-            "description": "In Class 2 you will continue to learn safe physical alignment of basic power yoga postures in addition to refining what you have already learned in the first class in the series.",
+            "name": "Lecture 2 - Alignment",
+            "description": "In lecture 2 you will continue to learn safe physical alignment of basic power yoga postures in addition to refining what you have already learned in the first lecture in the series.",
             "video": "",
             "program": 1,
             "instructor": "Daniel Potter",
@@ -29,11 +29,11 @@
         }
     }, {
         "pk": 3,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BEG-001-CLA-003",
-            "name": "Class 3 - Strength & Power",
-            "description": "n class 3 you will learn new postures that will help you cultivate inner strength such as Boat Pose, Crow Pose,, and the full version of High to Low Pushup.",
+            "name": "Lecture 3 - Strength & Power",
+            "description": "n lecture 3 you will learn new postures that will help you cultivate inner strength such as Boat Pose, Crow Pose,, and the full version of High to Low Pushup.",
             "video": "",
             "program": 1,
             "instructor": "Daniel Potter",
@@ -43,11 +43,11 @@
         }
     }, {
         "pk": 4,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BEG-001-CLA-004",
-            "name": "Class 4 - The Art of Flow",
-            "description": "In class 4 you will continue to learn safe physical alignment of basic power yoga postures as well as focus on moving with your breath.",
+            "name": "lecture 4 - The Art of Flow",
+            "description": "In lecture 4 you will continue to learn safe physical alignment of basic power yoga postures as well as focus on moving with your breath.",
             "video": "",
             "program": 1,
             "instructor": "Daniel Potter",
@@ -57,10 +57,10 @@
         }
     }, {
         "pk": 5,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BEG-001-CLA-005",
-            "name": "Class 5 - Practice Presence",
+            "name": "lecture 5 - Practice Presence",
             "description": "This is a full body complete power yoga practice that gives you plenty of time to warm up, strengthen, stretch deeply, and wind down.",
             "video": "",
             "program": 1,
@@ -71,11 +71,11 @@
         }
     }, {
         "pk": 6,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-YOG-001",
             "name": "Yoga for Beginners",
-            "description": "The perfect first class",
+            "description": "The perfect first lecture",
             "video": "",
             "program": 2,
             "instructor": "Ruppert Weasly",
@@ -85,7 +85,7 @@
         }
     }, {
         "pk": 7,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-INT-001",
             "name": "Intro to Yoga - 1",
@@ -99,7 +99,7 @@
         }
     }, {
         "pk": 8,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-INT-002",
             "name": "Intro to Yoga - 2",
@@ -113,7 +113,7 @@
         }
     }, {
         "pk": 9,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-INT-003",
             "name": "Intro to Yoga - 3",
@@ -127,7 +127,7 @@
         }
     }, {
         "pk": 10,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-QIY-001",
             "name": "Qi Yoga for Beginners",
@@ -141,7 +141,7 @@
         }
     }, {
         "pk": 11,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-ALI-001",
             "name": "Align the Spine",
@@ -155,7 +155,7 @@
         }
     }, {
         "pk": 12,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "BEG-BAS-001-BAL-001",
             "name": "Balance",
@@ -169,7 +169,7 @@
         }
     }, {
         "pk": 13,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-001",
             "name": "Day 1",
@@ -183,7 +183,7 @@
         }
     }, {
         "pk": 14,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-002",
             "name": "Day 2",
@@ -197,7 +197,7 @@
         }
     }, {
         "pk": 15,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-003",
             "name": "Day 3",
@@ -211,7 +211,7 @@
         }
     }, {
         "pk": 16,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-004",
             "name": "Day 4",
@@ -225,7 +225,7 @@
         }
     }, {
         "pk": 17,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-005",
             "name": "Day 5",
@@ -239,7 +239,7 @@
         }
     }, {
         "pk": 18,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-005",
             "name": "Day 5",
@@ -253,7 +253,7 @@
         }
     }, {
         "pk": 19,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-006",
             "name": "Day 6",
@@ -267,7 +267,7 @@
         }
     }, {
         "pk": 20,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-007",
             "name": "Day 7",
@@ -281,7 +281,7 @@
         }
     }, {
         "pk": 21,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-008",
             "name": "Day 8",
@@ -295,7 +295,7 @@
         }
     }, {
         "pk": 22,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-009",
             "name": "Day 9",
@@ -309,7 +309,7 @@
         }
     }, {
         "pk": 23,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-010",
             "name": "Day 10",
@@ -323,7 +323,7 @@
         }
     }, {
         "pk": 24,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-011",
             "name": "Day 11",
@@ -337,7 +337,7 @@
         }
     }, {
         "pk": 25,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-012",
             "name": "Day 12",
@@ -351,7 +351,7 @@
         }
     }, {
         "pk": 26,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-013",
             "name": "Day 13",
@@ -365,7 +365,7 @@
         }
     }, {
         "pk": 27,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-14D-001-DAY-014",
             "name": "Day 14",
@@ -379,7 +379,7 @@
         }
     }, {
         "pk": 28,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-5DA-001-EVE-001",
             "name": "Evening 1",
@@ -393,7 +393,7 @@
         }
     }, {
         "pk": 29,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-5DA-001-EVE-002",
             "name": "Evening 2",
@@ -407,7 +407,7 @@
         }
     }, {
         "pk": 30,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-5DA-001-EVE-003",
             "name": "Evening 3",
@@ -421,7 +421,7 @@
         }
     }, {
         "pk": 31,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-5DA-001-EVE-004",
             "name": "Evening 4",
@@ -435,7 +435,7 @@
         }
     }, {
         "pk": 32,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "CHA-5DA-001-EVE-005",
             "name": "Evening 5",
@@ -449,10 +449,10 @@
         }
     }, {
         "pk": 33,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-001",
-            "name": "class 1",
+            "name": "lecture 1",
             "description": "Learn to use a chin lock in various yoga poses to help stimulate the thyroid.",
             "video": "",
             "program": 5,
@@ -463,11 +463,11 @@
         }
     }, {
         "pk": 34,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-002",
-            "name": "Class 2",
-            "description": "second class",
+            "name": "lecture 2",
+            "description": "second lecture",
             "video": "",
             "program": 5,
             "instructor": "Alan Snape",
@@ -477,11 +477,11 @@
         }
     }, {
         "pk": 35,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-003",
-            "name": "Class 3",
-            "description": "Third class of yoga for weight loss program",
+            "name": "lecture 3",
+            "description": "Third lecture of yoga for weight loss program",
             "video": "",
             "program": 5,
             "instructor": "Alan Snape",
@@ -491,11 +491,11 @@
         }
     }, {
         "pk": 36,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-004",
-            "name": "Class 4",
-            "description": "60 min class of yoga for weight loss program",
+            "name": "lecture 4",
+            "description": "60 min lecture of yoga for weight loss program",
             "video": "",
             "program": 5,
             "instructor": "Alan Snape",
@@ -505,10 +505,10 @@
         }
     }, {
         "pk": 37,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-005",
-            "name": "Class 5",
+            "name": "lecture 5",
             "description": "Create heat in the body by incresing the heart rate as you flow through a beautiful practice.",
             "video": "",
             "program": 5,
@@ -519,10 +519,10 @@
         }
     }, {
         "pk": 38,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-006",
-            "name": "Class 6",
+            "name": "lecture 6",
             "description": "An introduction into HardCORE yoga with Weights. You won't soon forget it!",
             "video": "",
             "program": 5,
@@ -533,11 +533,11 @@
         }
     }, {
         "pk": 39,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-007",
-            "name": "Class 7",
-            "description": "An insanely challenging yoga-fitness fusion class that will have you dripping with sweat.",
+            "name": "lecture 7",
+            "description": "An insanely challenging yoga-fitness fusion lecture that will have you dripping with sweat.",
             "video": "",
             "program": 5,
             "instructor": "Alan Snape",
@@ -547,10 +547,10 @@
         }
     }, {
         "pk": 40,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-YOG-001-CLA-008",
-            "name": "Class 8",
+            "name": "lecture 8",
             "description": "Sculpt your shoulders and tighten your tummy while getting your heart rate up.",
             "video": "",
             "program": 5,
@@ -561,11 +561,11 @@
         }
     }, {
         "pk": 41,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-001",
-            "name": "Class 1",
-            "description": "Hardcore yoga class 1",
+            "name": "lecture 1",
+            "description": "Hardcore yoga lecture 1",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -575,11 +575,11 @@
         }
     }, {
         "pk": 42,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-002",
-            "name": "Class 2",
-            "description": "Hardcore yoga class 2",
+            "name": "lecture 2",
+            "description": "Hardcore yoga lecture 2",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -589,11 +589,11 @@
         }
     }, {
         "pk": 43,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-003",
-            "name": "Class 3",
-            "description": "Hardcore yoga class 3",
+            "name": "lecture 3",
+            "description": "Hardcore yoga lecture 3",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -603,11 +603,11 @@
         }
     }, {
         "pk": 44,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-004",
-            "name": "Class 4",
-            "description": "Hardcore yoga class 4",
+            "name": "lecture 4",
+            "description": "Hardcore yoga lecture 4",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -617,11 +617,11 @@
         }
     }, {
         "pk": 45,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-005",
-            "name": "Class 5",
-            "description": "Hardcore yoga class 5",
+            "name": "lecture 5",
+            "description": "Hardcore yoga lecture 5",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -631,11 +631,11 @@
         }
     }, {
         "pk": 46,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-006",
-            "name": "Class 6",
-            "description": "Hardcore yoga class 6",
+            "name": "lecture 6",
+            "description": "Hardcore yoga lecture 6",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -645,11 +645,11 @@
         }
     }, {
         "pk": 47,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-007",
-            "name": "Class 7",
-            "description": "Hardcore yoga class 7",
+            "name": "lecture 7",
+            "description": "Hardcore yoga lecture 7",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -659,11 +659,11 @@
         }
     }, {
         "pk": 48,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-008",
-            "name": "Class 8",
-            "description": "Hardcore yoga class 8",
+            "name": "lecture 8",
+            "description": "Hardcore yoga lecture 8",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -673,11 +673,11 @@
         }
     }, {
         "pk": 49,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-009",
-            "name": "Class 9",
-            "description": "Hardcore yoga class 9",
+            "name": "lecture 9",
+            "description": "Hardcore yoga lecture 9",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -687,11 +687,11 @@
         }
     }, {
         "pk": 50,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "DYN-HAR-001-CLA-010",
-            "name": "Class 10",
-            "description": "Hardcore yoga class 10",
+            "name": "lecture 10",
+            "description": "Hardcore yoga lecture 10",
             "video": "",
             "program": 6,
             "instructor": "Robbie Hagrid",
@@ -701,11 +701,11 @@
         }
     }, {
         "pk": 51,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-001",
             "name": "Day 1",
-            "description": "Try this class and balance the strength you have developed in your wrists, neck, chest, shoulders and arms.",
+            "description": "Try this lecture and balance the strength you have developed in your wrists, neck, chest, shoulders and arms.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -715,7 +715,7 @@
         }
     }, {
         "pk": 52,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-002",
             "name": "Day 2",
@@ -729,11 +729,11 @@
         }
     }, {
         "pk": 53,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-003",
             "name": "Day 3",
-            "description": "This class will help you find where stress is manifesting in your upper back, neck and shoulders - you can expect to finish feeling wide, expansive and free.",
+            "description": "This lecture will help you find where stress is manifesting in your upper back, neck and shoulders - you can expect to finish feeling wide, expansive and free.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -743,11 +743,11 @@
         }
     }, {
         "pk": 54,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-004",
             "name": "Day 4",
-            "description": "This simple class can certainly help unwind the ouchies and falling shoulders caused by spending more time on the computer and empower the yummy feelings!",
+            "description": "This simple lecture can certainly help unwind the ouchies and falling shoulders caused by spending more time on the computer and empower the yummy feelings!",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -757,11 +757,11 @@
         }
     }, {
         "pk": 55,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-005",
             "name": "Day 5",
-            "description": "Learn how to deeply, safely, and effectively unlock tight shoulders, and that pesky, traditionally stuck thoracic spine in this all levels class.",
+            "description": "Learn how to deeply, safely, and effectively unlock tight shoulders, and that pesky, traditionally stuck thoracic spine in this all levels lecture.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -771,11 +771,11 @@
         }
     }, {
         "pk": 56,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-006",
             "name": "Day 6",
-            "description": "There is a little bit of everything in this class, including pranayama, and you'll open your entire body, with an extra emphasis on your shoulders, neck, and upper body.",
+            "description": "There is a little bit of everything in this lecture, including pranayama, and you'll open your entire body, with an extra emphasis on your shoulders, neck, and upper body.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -785,7 +785,7 @@
         }
     }, {
         "pk": 57,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-007",
             "name": "Day 7",
@@ -799,7 +799,7 @@
         }
     }, {
         "pk": 58,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-008",
             "name": "Day 8",
@@ -813,11 +813,11 @@
         }
     }, {
         "pk": 59,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-009",
             "name": "Day 9",
-            "description": "Proper posture requires you to have firmly planted feet, straight legs, a strong core and open chest and shoulders - this class will leave you standing taller and teach you tips on how to maintain good posture when you step off your mat.",
+            "description": "Proper posture requires you to have firmly planted feet, straight legs, a strong core and open chest and shoulders - this lecture will leave you standing taller and teach you tips on how to maintain good posture when you step off your mat.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -827,11 +827,11 @@
         }
     }, {
         "pk": 60,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-010",
             "name": "Day 10",
-            "description": "This class starts with gentle neck and shoulder stretches, and then moves into longer yin-like holds to release the last bits of tension from these important body areas.",
+            "description": "This lecture starts with gentle neck and shoulder stretches, and then moves into longer yin-like holds to release the last bits of tension from these important body areas.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -841,7 +841,7 @@
         }
     }, {
         "pk": 61,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-011",
             "name": "Day 11",
@@ -855,11 +855,11 @@
         }
     }, {
         "pk": 62,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-012",
             "name": "Day 12",
-            "description": "This strength-building class will teach you how to stabilize with your core while working your limbs in poses like Locust Pose, 4-Limbed Staff Pose, and Side Plank Pose.",
+            "description": "This strength-building lecture will teach you how to stabilize with your core while working your limbs in poses like Locust Pose, 4-Limbed Staff Pose, and Side Plank Pose.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -869,11 +869,11 @@
         }
     }, {
         "pk": 63,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-013",
             "name": "Day 13",
-            "description": "While this class delves into all the major physical challenges that older warriors face in life, it focuses on the neck and it's potential problems – including vertigo, fracture and nerve damage from bulging discs.",
+            "description": "While this lecture delves into all the major physical challenges that older warriors face in life, it focuses on the neck and it's potential problems – including vertigo, fracture and nerve damage from bulging discs.",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -883,11 +883,11 @@
         }
     }, {
         "pk": 64,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-14D-001-DAY-014",
             "name": "Day 14",
-            "description": "This no muss, no fluff, asana class is about moving, opening and feeling good in the body- great for anyone who has a stiff upper back and shoulders (desk jockeys, hair dressers, nursing mothers, athletes, etc.).",
+            "description": "This no muss, no fluff, asana lecture is about moving, opening and feeling good in the body- great for anyone who has a stiff upper back and shoulders (desk jockeys, hair dressers, nursing mothers, athletes, etc.).",
             "video": "",
             "program": 7,
             "instructor": "Bonnie Weasley",
@@ -897,7 +897,7 @@
         }
     }, {
         "pk": 65,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-PRA-001",
             "name": "Pranyama for Better Sleep",
@@ -911,11 +911,11 @@
         }
     }, {
         "pk": 66,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-YOG-001",
             "name": "Yoga for a Good Night's Sleep",
-            "description": "This class will help you induce sleep give you more energy for a clearer mind and better health in general.",
+            "description": "This lecture will help you induce sleep give you more energy for a clearer mind and better health in general.",
             "video": "",
             "program": 8,
             "instructor": "Evanna Lovegood",
@@ -925,7 +925,7 @@
         }
     }, {
         "pk": 67,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-NIG-001",
             "name": "Nighttime Nidra",
@@ -939,7 +939,7 @@
         }
     }, {
         "pk": 68,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-THE-001",
             "name": "Therapeutic Yoga for Stress, Anxiety, & Insomnia",
@@ -953,11 +953,11 @@
         }
     }, {
         "pk": 69,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-BED-001",
             "name": "Bedtime Yin with Body Scan",
-            "description": "This class will prepare both the body and the mind for a relaxing and potent night of sleep.",
+            "description": "This lecture will prepare both the body and the mind for a relaxing and potent night of sleep.",
             "video": "",
             "program": 8,
             "instructor": "Evanna Lovegood",
@@ -967,7 +967,7 @@
         }
     }, {
         "pk": 70,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-TIB-001",
             "name": "Tibetan Yoga Nidra",
@@ -981,11 +981,11 @@
         }
     }, {
         "pk": 71,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "THE-YOG-001-YOG-002",
             "name": "Yoga for Better Sleep",
-            "description": "This short and relaxing class will help you let go of your day, melt into the moment, and release any tension in your body.",
+            "description": "This short and relaxing lecture will help you let go of your day, melt into the moment, and release any tension in your body.",
             "video": "",
             "program": 8,
             "instructor": "Evanna Lovegood",
@@ -995,7 +995,7 @@
         }
     }, {
         "pk": 72,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-REL-001-SAR-001",
             "name": "Saraswati Hangs the Stars",
@@ -1009,7 +1009,7 @@
         }
     }, {
         "pk": 73,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-REL-001-NOF-001",
             "name": "No Fuss Restorative Yoga",
@@ -1023,7 +1023,7 @@
         }
     }, {
         "pk": 74,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-REL-001-TAK-001",
             "name": "Take a Load Off",
@@ -1037,11 +1037,11 @@
         }
     }, {
         "pk": 75,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-REL-001-SUP-001",
             "name": "Super Lazy Restorative",
-            "description": "This class is designed for when you've had a long day on your feet - there is little movement so you can just unwind into the cave of your consciousness.",
+            "description": "This lecture is designed for when you've had a long day on your feet - there is little movement so you can just unwind into the cave of your consciousness.",
             "video": "",
             "program": 9,
             "instructor": "Matthew Longbottom",
@@ -1051,11 +1051,11 @@
         }
     }, {
         "pk": 76,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-REL-001-",
             "name": "Rest & Rejuvenate",
-            "description": "his class focuses on a few postures that you will hold for a long time so you can deeply and completely let go - if you fall asleep, even better!",
+            "description": "his lecture focuses on a few postures that you will hold for a long time so you can deeply and completely let go - if you fall asleep, even better!",
             "video": "",
             "program": 9,
             "instructor": "Matthew Longbottom",
@@ -1065,7 +1065,7 @@
         }
     }, {
         "pk": 77,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-001",
             "name": "Yin Yoga for Stress Relief",
@@ -1079,11 +1079,11 @@
         }
     }, {
         "pk": 78,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-002",
             "name": "Yin Yoga for Energy and Clarity",
-            "description": "The yin poses in this class work with your body's innate intelligence to recharge by working with the kidneys, gently detoxing the spinal column, and enhancing blood flow to the internal organs.",
+            "description": "The yin poses in this lecture work with your body's innate intelligence to recharge by working with the kidneys, gently detoxing the spinal column, and enhancing blood flow to the internal organs.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",
@@ -1093,11 +1093,11 @@
         }
     }, {
         "pk": 79,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-003",
             "name": "Yin Yoga & Breathwork for Relaxation",
-            "description": "This Yin class will recharge you and encourage you to let go with your exhale so that you can feel lighter and start fresh.",
+            "description": "This Yin lecture will recharge you and encourage you to let go with your exhale so that you can feel lighter and start fresh.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",
@@ -1107,7 +1107,7 @@
         }
     }, {
         "pk": 80,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-004",
             "name": "Yin for Your Upper Body",
@@ -1121,11 +1121,11 @@
         }
     }, {
         "pk": 81,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-MEL-001",
             "name": "Melt and Let Go",
-            "description": "This class balances soothing forward folds with a supported backbend and finishes with a juicy lateral stretch and twist for the spine.",
+            "description": "This lecture balances soothing forward folds with a supported backbend and finishes with a juicy lateral stretch and twist for the spine.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",
@@ -1135,11 +1135,11 @@
         }
     }, {
         "pk": 82,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-BED-001",
             "name": "Bedtime Yin with Body Scan",
-            "description": "This class will prepare the body and mind for a relaxing and potent night of sleep by releasing tension from the body with a Yin yoga sequence followed by a body scan to unwind the mind.",
+            "description": "This lecture will prepare the body and mind for a relaxing and potent night of sleep by releasing tension from the body with a Yin yoga sequence followed by a body scan to unwind the mind.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",
@@ -1149,11 +1149,11 @@
         }
     }, {
         "pk": 83,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-005",
             "name": "Yin Yoga for Flexibility and Relaxation",
-            "description": "In this class , we combine the long holds of Yin with some of the support of Restorative to create more ease in body and mind.",
+            "description": "In this lecture , we combine the long holds of Yin with some of the support of Restorative to create more ease in body and mind.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",
@@ -1163,7 +1163,7 @@
         }
     }, {
         "pk": 84,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-YIN-006",
             "name": "Yin: Release Resistance",
@@ -1177,11 +1177,11 @@
         }
     }, {
         "pk": 85,
-        "model": "items.class",
+        "model": "items.lecture",
         "fields": {
             "sku": "REL-YIN-001-GEN-001",
             "name": "Gentle Yin for Your Neck",
-            "description": "This class starts with gentle neck and shoulder stretches, and them move into longer yin-like holds to release the last bits of tension from these important body areas.",
+            "description": "This lecture starts with gentle neck and shoulder stretches, and them move into longer yin-like holds to release the last bits of tension from these important body areas.",
             "video": "",
             "program": 10,
             "instructor": "Katie Chang",

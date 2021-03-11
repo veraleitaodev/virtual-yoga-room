@@ -34,7 +34,7 @@
                     {{ program.name }}</h5>
                 <p class="text-md d-none d-md-flex">{{ program.description|safe }}</p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item text-center">{{ program.number_classes }} classes</li>
+                    <li class="list-group-item text-center">{{ program.number_lectures }} lectures</li>
                     <li class="list-group-item text-center text-muted">{{ program.instructor }}</li>
                     <li class="list-group-item text-center">
                         <small class="text-muted logo-green"><i class="fas fa-star logo-green pr-2"></i>
@@ -48,25 +48,25 @@
         </div>
 
 
-        <!-- Classes included in the program -->
+        <!-- Lectures included in the program -->
         <div class="container-fluid bg-offwhite p-0 m-0">
             <div class="row mt-3 py-3">
                 <div class="col-12">
-                    <p class="text-center"><strong>{{ program.number_classes }} Classes Included</strong></p>
+                    <p class="text-center"><strong>{{ program.number_lectures }} Lectures Included</strong></p>
                     <h5 class="text-center pb-2">{{ program.name }} </h5>
                 </div>
             </div>
             <div class="row pb-5">
 
-                {% for class in selected_classes %}
+                {% for lecture in selected_lectures %}
                 <div data-aos="fade-right" data-aos-duration="1100" class="col-lg-4">
                     <div class="card shadow-lg mb-5 mx-4">
                         <div class="card-body text-center">
-                            <h5 class="card-title pb-2">{{ class.name }}</h5>
+                            <h5 class="card-title pb-2">{{ lecture.name }}</h5>
                             <ul class="list-group list-group-flush text-center">
                                 <li class="list-group-item text-muted"></li>
                                 <li class="list-group-item"><small class="text-muted logo-green"><i
-                                            class="fas fa-star logo-green pr-2"></i> {{ class.rating }} / 5</small></li>
+                                            class="fas fa-star logo-green pr-2"></i> {{ lecture.rating }} / 5</small></li>
                             </ul>
                             <div class="card-body d-flex justify-content-center my-2">
                                 <a href="#" class="btn bg-logo-green white small-btn text-center">More
