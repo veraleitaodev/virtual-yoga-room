@@ -214,10 +214,6 @@ width: 100%;
 }
 
 /*=== Cards ===*/
-.card-text {
-    min-height: 50px;
-}
-
 .small-btn {
     height: 70%;
     width: 70%;
