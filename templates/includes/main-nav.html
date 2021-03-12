@@ -148,15 +148,19 @@
                     <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
                         
                         <!-- lectures link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="{% url 'items:lectures' %}">lectures</a>
-                        </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link white t p-3" id="lecture-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Lectures</a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="lecture-link">
+                                <li><a href="{% url 'items:lectures' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
+                                <li><a href="{% url 'items:lectures' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Lectures</a></li>
+                            </ul>
                         <!-- Programs link -->
-                        <li class="nav-item">
-                            <a class="nav-link  white p-3" href="{% url 'items:programs' %}">Programs</a>
-                        </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link white t p-3" id="program-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Programs</a>
+                            <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
+                                <li><a href="{% url 'items:programs' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
+                                <li><a href="{% url 'items:programs' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Programs</a></li>
+                            </ul>
                         <!-- About link -->
                         <li class="nav-item">
                             <a class="nav-link white p-3" href="#">About</a>

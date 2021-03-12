@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
+from django.db.models.functions import Lower
 from django.contrib import messages
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
@@ -37,17 +38,35 @@ def all_lectures(request):
     lectures_count = lectures.count()
 
     query = None
+    sort = None
+    direction = None
 
     if request.GET:
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                lectures = lectures.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            lectures = lectures.order_by(sortkey)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(
-                    request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('items:lectures'))
 
-        queries = Q(name__icontains=query) | Q(description__icontains=query)
-        lectures = lectures.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            lectures = lectures.filter(queries)
+
+    current_sorting = f'{sort}_{direction}'
 
     page = request.GET.get('page', 1)
     paginator = Paginator(lectures, 6)
@@ -62,7 +81,8 @@ def all_lectures(request):
         'lectures': lectures,
         'lectures_count': lectures_count,
         'search_term': query,
-        'page': page,
+        'current_sorting': current_sorting,
+        'page': page
     }
 
     return render(request, 'items/lectures.html', context)
