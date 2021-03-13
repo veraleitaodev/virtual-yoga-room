@@ -14,16 +14,6 @@
         <!-- breadcrumbs to navigate back to hompage or go to lectures -->
         {% include 'items/includes/breadcrumbs.html' %}
 
-        <!-- programs count -->
-        <div class="row">
-            <div class="col my-3">
-                <p>
-                    <i class="fas fa-spa pink mr-1"></i>
-                    <em>{{ program_count }} program{{ program_count|pluralize }} available </em>
-                </p>
-            </div>
-        </div>
-
         <!-- page heading -->
         <div class="row">
             <div class="col text-center my-3">
@@ -31,16 +21,33 @@
             </div>
         </div>
 
-        <!-- page heading informative banner text hidden for mobile view-->
-        <div class="row bg-light shadow-lg mb-5 mx-3">
-            <div class="col-12 my-3">
-                <p class="lead d-none d-md-flex ps-2">Here you find all the Programs currently available. Start with the program that best
-                    suits your needs.</p>
-                {% for c in categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'items:programs' %}?sort=category&direction=asc">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_ }}</span>
-                    </a>
-                {% endfor %}
+         <!-- informative banner with sorting box and search results info-->
+        <div class="row bg-light shadow-lg my-3 mx-3">
+            <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper w-50">
+                    <select id="sort-selector"
+                        class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}dark{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                        </option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                            to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                            (high to low)</option>
+                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                            (low to high)</option>
+                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                            (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                        </option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted mt-3 text-center text-md-left"><i
+                        class="fas fa-spa pink mr-2"> | </i> {{ program_count }} Program{{ program_count|pluralize }} {% if search_term %} found for
+                    <strong>"{{ search_term }}"</strong>{% endif %}</p>
             </div>
         </div>
 

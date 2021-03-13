@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <!-- informative banner with text hidden for mobile view-->
+        <!-- informative banner with sorting box and search results info-->
         <div class="row bg-light shadow-lg my-3 mx-3">
             <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper w-50">
@@ -51,7 +51,7 @@
             </div>
             <div class="col-12 col-md-6 order-md-first">
                 <p class="text-muted mt-3 text-center text-md-left"><i
-                        class="fas fa-spa pink mr-2"> | </i> {{ lectures_count }} Lectures {% if search_term %} found for
+                        class="fas fa-spa pink mr-2"> | </i> {{ lectures_count }} Lecture{{ program_count|pluralize }} {% if search_term %} found for
                     <strong>"{{ search_term }}"</strong>{% endif %}</p>
             </div>
         </div>

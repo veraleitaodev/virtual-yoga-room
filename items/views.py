@@ -11,6 +11,37 @@ def all_programs(request):
     """ A view to show all programs, including sorting and search queries """
     programs = Program.objects.all()
     program_count = programs.count()
+
+    query = None
+    sort = None
+    direction = None
+
+    if request.GET:
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                programs = lectures.annotate(lower_name=Lower('name'))
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            programs = programs.order_by(sortkey)
+
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('items:programs'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            programs = programs.filter(queries)
+            program_count = programs.count()
+
+    current_sorting = f'{sort}_{direction}'
+
     page = request.GET.get('page', 1)
 
     paginator = Paginator(programs, 4)
@@ -26,6 +57,8 @@ def all_programs(request):
         'programs': programs,
         'program_count': program_count,
         'page': page,
+        'search_term': query,
+        'current_sorting': current_sorting
     }
 
     return render(request, 'items/programs.html', context)
