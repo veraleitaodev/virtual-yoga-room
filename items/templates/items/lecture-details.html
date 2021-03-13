@@ -43,12 +43,16 @@
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center my-2">
-                   <form class="form" action="" method="POST">
+                    <a href="{% url 'items:programs' %}"
+                        class="btn btn-lg text-decoration-none btn-outline-dark mb-5 me-2 d-flex justify-content-center align-items-center"><i
+                            class="fas fa-angle-double-left fa-lg me-2"></i> Continue Shopping</a>
+                    <form class="form" action="" method="POST">
                         {% csrf_token %}
                         <input name="quantity" type="hidden" value="1">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="submit" class="btn bg-pink text-center shadow px-3" value="Add to Cart">
+                        <input type="submit" class="btn bg-pink btn-lg text-center shadow px-3" value="Add to Cart">
                     </form>
+                    
                 </div>
             </div>
         </div>

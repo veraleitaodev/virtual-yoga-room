@@ -45,9 +45,12 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 order-md-first">
-                <p class="text-muted mt-3 text-center text-md-left"><i
-                        class="fas fa-spa pink mr-2"> | </i> {{ program_count }} Program{{ program_count|pluralize }} {% if search_term %} found for
-                    <strong>"{{ search_term }}"</strong>{% endif %}</p>
+                <p class="text-muted mt-3 text-center text-md-left">
+                    <i class="fas fa-spa pink me-2"> | </i> {{ program_count }} Program{{ program_count|pluralize }} 
+                        {% if search_term %} found for
+                            <strong>"{{ search_term }}"</strong>
+                        {% endif %}
+                </p>
             </div>
         </div>
 

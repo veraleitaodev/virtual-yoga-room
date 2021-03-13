@@ -37,7 +37,7 @@
             <div class="col-10 offset-1 mb-5">
 
                 <h3><a href="{% url 'blog:blog_details' blog.id %}" class="text-decoration-none logo-green"><i
-                            class="far fa-newspaper mr-1"></i> {{ blog.title }}</a></h3>
+                            class="far fa-newspaper me-1"></i> {{ blog.title }}</a></h3>
                 <p class="mb-0 text-muted">{{ blog.date|date:'d M Y'}}</p>
                 <p class="text-muted">{{ blog.author }}</p>
                 <p class="">{{ blog.content|safe|truncatechars:300 }}</p>
