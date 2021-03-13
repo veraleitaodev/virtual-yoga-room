@@ -43,7 +43,12 @@
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center my-2">
-                    <a href="#" class="btn btn-lg bg-pink text-center shadow mr-3">Start Now</a>
+                   <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <input name="quantity" type="hidden" value="1">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        <input type="submit" class="btn bg-pink text-center shadow px-3" value="Add to Cart">
+                    </form>
                 </div>
             </div>
         </div>
