@@ -36,6 +36,7 @@ def all_lectures(request):
 
     lectures = Lecture.objects.all()
     lectures_count = lectures.count()
+    programs = Program.objects.all()
 
     query = None
     sort = None
