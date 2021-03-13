@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Shopping Bag{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <!--breadcrumbs row with active page-->
+        <div class="row">
+            <div class="col">
+                {% include 'cart/includes/breadcrumbs.html' %}
+            </div>
+        </div>
+
+        <!--title row-->
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Shopping Bag</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                {% if cart_items %}
+                    <div></div>
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                    <a href="{% url 'items:programs' %}" class="btn btn-lg text-decoration-none bg-logo-green mb-5 d-flex justify-content-center align-items-center"><i class="fas fa-angle-double-left fa-lg mr-2"></i> Continue Shopping</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

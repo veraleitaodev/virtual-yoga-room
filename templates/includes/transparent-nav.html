@@ -51,7 +51,7 @@
                     </li>
                     <!-- Shopping cart Icon -->
                     <li class="list-inline-item ">
-                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
+                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="{% url 'cart:view_cart' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
                             </div>
@@ -108,7 +108,7 @@
                     </li>
                     <!-- Shopping cart Icon -->
                     <li class="list-inline-item ">
-                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
+                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="{% url 'cart:view_cart' %}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
                             </div>
