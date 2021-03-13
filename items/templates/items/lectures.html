@@ -14,16 +14,6 @@
         <!-- breadcrumbs to navigate back to hompage or go to lectures -->
         {% include 'items/includes/breadcrumbs.html' %}
 
-        <!-- lectures count -->
-        <div class="row">
-            <div class="col my-3">
-                <p>
-                    <i class="fas fa-spa pink mr-1"></i>
-                    <em>Total of {{ lectures_count }} lectures available </em>
-                </p>
-            </div>
-        </div>
-
         <div class="row">
             <div class="col my-3">
                 {% include 'includes/messages.html' %}
@@ -40,7 +30,7 @@
         <div class="row bg-light shadow-lg my-3 mx-3">
              <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}dark{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -48,15 +38,13 @@
                                 <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'items:lectures' %}">Lectures Home</a> | </span>
+                                 <i class="fas fa-spa pink mr-1"></i><span class="small"><a href="{% url 'items:lectures' %}">Lectures Home</a> | </span>
                             {% endif %}
                             {{ lectures|length }} Lectures {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -64,7 +52,7 @@
                 </div>
         </div>
 
-        <!-- display of programs cards in a loop -->
+        <!-- display of lecture cards in a loop -->
         {% include 'items/includes/lectures-loop.html' %}
 
         <!-- Pagination added based on bootstrap and django documentation -->

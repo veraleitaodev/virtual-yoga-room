@@ -36,7 +36,6 @@ def all_lectures(request):
 
     lectures = Lecture.objects.all()
     lectures_count = lectures.count()
-    programs = Program.objects.all()
 
     query = None
     sort = None
@@ -50,8 +49,6 @@ def all_lectures(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 lectures = lectures.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
