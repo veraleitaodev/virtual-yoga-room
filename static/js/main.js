@@ -20,4 +20,25 @@ $(document).ready(function () {
   // to update the copyright date in the footer
   $("#copyright").text(new Date().getFullYear());
 
+  // to activate select form on lectures template
+  $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new Url(window.location);
+
+        var selectedVal = selector.val();
+        if(selectedVal != "reset"){
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
 });

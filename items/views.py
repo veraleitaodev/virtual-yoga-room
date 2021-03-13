@@ -63,6 +63,7 @@ def all_lectures(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             lectures = lectures.filter(queries)
+            lectures_count = lectures.count()
 
     current_sorting = f'{sort}_{direction}'
 
