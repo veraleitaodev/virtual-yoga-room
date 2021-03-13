@@ -23,7 +23,7 @@ $(document).ready(function () {
   // to activate select form on lectures template
   $('#sort-selector').change(function() {
         var selector = $(this);
-        var currentUrl = new Url(window.location);
+        var currentUrl = new URL(window.location);
 
         var selectedVal = selector.val();
         if(selectedVal != "reset"){
