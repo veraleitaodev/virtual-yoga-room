@@ -236,6 +236,28 @@ input#id_name {
     margin-bottom: 30px;
 }
 
+/*=== back to top button ===*/
+/*-- back to top button --*/
+
+.back-top-btn {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
+
+.back-top-link{
+    cursor: pointer;
+}
+
+.back-top-btn:hover,
+.back-top-link:hover,
+.back-top-link i:hover {
+    text-shadow: none;
+    background-color: #0D0D0D;
+}
 
 @media (min-width: 768px) {
     .logo-nav {
