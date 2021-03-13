@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect
 from items.models import Program, Lecture
 from django.contrib import messages
 
