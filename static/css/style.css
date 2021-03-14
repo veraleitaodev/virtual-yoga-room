@@ -89,6 +89,15 @@ body {
     background-color: #718C49 !important;
 }
 
+.offwhite {
+    color: #f5f5f5 !important;
+}
+
+.bg-offwhite {
+    background-color: #f5f5f5 !important;
+}
+
+
 /* !important is used in order to override bootstrap colour settings */
 
 .transparent {
@@ -186,8 +195,8 @@ height:100vh;
 width: 100%;
 }
 
-/*=== Classes page ===*/
-.classes-card {
+/*=== lectures page ===*/
+.lectures-card {
     margin-bottom: 50px;
 }
 
@@ -205,16 +214,60 @@ width: 100%;
 }
 
 /*=== Cards ===*/
-.card-body.text-center {
-    min-height: 180px;
+.small-btn {
+    height: 70%;
+    width: 70%;
 }
 
+h5.card-title {
+    min-height: 56px;
+}
 
+/*=== form at blog details ===*/
+input#id_body,
+input#id_name {
+   border: 1px solid #0D0D0D !important;
+}
+
+/*=== Program Details page ==*/
+
+#programDetailRow {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*=== back to top button ===*/
+/*-- back to top button --*/
+
+.back-top-btn {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+}
+
+.back-top-link{
+    cursor: pointer;
+}
+
+.back-top-btn:hover,
+.back-top-link:hover,
+.back-top-link i:hover {
+    text-shadow: none;
+    background-color: #0D0D0D;
+}
 
 @media (min-width: 768px) {
-  .logo-nav {
-    max-width: 40px;
-}
+    .logo-nav {
+        max-width: 40px;
+    }
+
+    #programDetailRow {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -248,15 +301,14 @@ width: 100%;
 
     .logo-nav {
     max-width: 45px;
-}
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     
-body {
+    body {
         height:calc(100vh-116px);
     }
     
-
 }
