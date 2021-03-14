@@ -27,11 +27,45 @@
 
         <!--page content row - content is formated with html when imputted in django admin-->
         <div class="row pb-3">
-            <div class="col-10 offset-1 mb-5">
+            <div class="col-10 offset-1 mb-3">
             
                 <p class="mb-0 text-muted text-center"><small>{{ blog.date|date:'jS M Y'}}</small></p>
                 <p class="text-muted text-center"><small>{{ blog.author }}</small></p>
                 <p class="text-med">{{ blog.content|safe }}</p>
+            </div>
+        </div>
+        <div class="row pb-3">
+            <div class="col-10 offset-1 mb-5">
+                <p><em>{{ comments.count }} comment{{comments.count|pluralize}}</em><i class="fas fa-meteor pink"></i></p>
+
+                <!--display of all comments related to the post-->
+                {% for comment in comments %}
+                    {% autoescape on %}
+                        <p>{{ comment.body }}</p>
+                    {% endautoescape %}
+                    <p class="text-muted"><small>{{ comment.name }}</small></p>
+                    <p class="text-muted"><small>{{ blog.date|date:'D M Y'}}</small></p> 
+            
+                {% endfor %}
+            </div>
+
+            <div class="col-10 offset-1 mb-5">
+                <div class="card-body">
+                    {% if new_comment %}
+                        <div class="alert alert-success" role="alert">
+                            Your comment is waiting moderation
+                        </div>
+                    {% else %}
+                        <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
+                        <div>
+                            <form method="POST">
+                                {{ comment_form.as_p }}
+                                {% csrf_token %}
+                                    <button type="submit" class="btn bg-white dark-pink btn shadow">Submit</button>
+                            </form>
+                        </div>
+                    {% endif%}
+                </div>
             </div>
         </div>
         
