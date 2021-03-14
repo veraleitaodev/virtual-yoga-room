@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+{% block extra_title %}Profile{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <!--breadcrumbs row with active page-->
+        <div class="row">
+            <div class="col">
+                
+            </div>
+        </div>
+
+        <!--title row-->
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">My Profile</h2>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
