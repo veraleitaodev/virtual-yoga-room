@@ -1,9 +1,7 @@
 from django.shortcuts import render
 
 
-def profile(request):
-    """ Display the user's profile. """
-    template = 'profiles/profile.html'
-    context = {}
+def view_cart(request):
+    """ A view that renders the cart contents page """
 
-    return render(request, template, context)
+    return render(request, 'cart/cart.html')

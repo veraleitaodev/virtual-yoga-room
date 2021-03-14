@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Shopping Bag{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+
+        <!--breadcrumbs row with active page-->
+        <div class="row">
+            <div class="col">
+                {% include 'cart/includes/breadcrumbs.html' %}
+            </div>
+        </div>
+
+        <!--title row-->
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Shopping Bag</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                {% if cart_items %}
+                <div>
+        
+                    <div class="table-responsive rounded">
+                        <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Number</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Items</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in cart_items %}
+                                <tr>
+                                    
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-5 text-right">
+                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                       
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-right">
+                                     <a href="{% url 'items:programs' %}"
+                        class="btn btn-lg text-decoration-none btn-outline-dark mb-5 me-2 d-flex justify-content-center align-items-center"><i
+                            class="fas fa-angle-double-left fa-lg me-2"></i> Continue Shopping</a>
+                                    <a href="" class="btn bg-pink btn-lg text-center shadow" >
+                                        <span class="text-uppercase">Secure Checkout</span>
+                                        <span class="icon">
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                {% else %}
+                <p class="lead mb-5">Your bag is empty.</p>
+                <a href="{% url 'items:programs' %}"
+                    class="btn btn-lg text-decoration-none bg-logo-green mb-5 d-flex justify-content-center align-items-center"><i
+                        class="fas fa-angle-double-left fa-lg me-2"></i> Continue Shopping</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
