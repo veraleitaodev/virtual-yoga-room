@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}Programs{% endblock %}
+
+{% block content %}
+<header>
+    {% include 'includes/main-nav.html' %}
+</header>
+
+<section class="margin-top-navbar">
+    <!--Main content-->
+    <div class="container-fluid">
+        
+        <!-- breadcrumbs to navigate back to hompage or go to lectures -->
+        {% include 'items/includes/breadcrumbs.html' %}
+
+        <!-- page heading -->
+        <div class="row">
+            <div class="col text-center my-3">
+                <h2 class="heading-font heading-item pb-2">Virtual Yoga Programs</h2>
+            </div>
+        </div>
+
+         <!-- informative banner with sorting box and search results info-->
+        <div class="row bg-light shadow-lg my-3 mx-3">
+            <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper w-50">
+                    <select id="sort-selector"
+                        class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}dark{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                        </option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                            to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                            (high to low)</option>
+                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                            (low to high)</option>
+                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                            (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                        </option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-md-first">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    <i class="fas fa-spa pink me-2"> | </i> {{ program_count }} Program{{ program_count|pluralize }} 
+                        {% if search_term %} found for
+                            <strong>"{{ search_term }}"</strong>
+                        {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <!-- display of programs cards in a loop -->
+            {% include 'items/includes/programs-loop.html' %}
+    
+
+        <!-- Pagination added based on bootstrap and django documentation -->
+        <nav aria-label="Page navigation example">
+            {% if programs.has_other_pages %}
+            <ul class="pagination d-flex justify-content-center">
+                {% if programs.has_previous %}
+                <li class="page-item"><a class="page-link logo-green"
+                        href="?page={{ programs.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span>&laquo;</span></a>
+                </li>
+                {% endif %}
+                {% for i in programs.paginator.page_range %}
+                {% if programs.number == i %}
+                <li class="page-item active" aria-current="page">
+                    <a class="page-link bg-logo-green active-borders" href="#"><span class="white">{{ i }} <span
+                                class="sr-only">(current)</span></span></a>
+                </li>
+                {% else %}
+
+                <li class="page-item">
+                    <a class="page-link logo-green" href="?page={{ i }}">{{ i }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                {% if programs.has_next %}
+                <li class="page-item">
+                    <a class="page-link logo-green" href="?page={{ programs.next_page_number }}">&raquo;</a>
+                </li>
+                {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><span>&raquo;</span></a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </nav>
+    </div>
+</section>
+{% endblock %}

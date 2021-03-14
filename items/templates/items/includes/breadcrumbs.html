@@ -1,0 +1,21 @@
+<div class="row mt-3">
+    <div class="col-12">
+        <!-- Breadcrumbs to facilitate navigation - with links to previous pages -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home:home' %}"
+                        class="breadcrumbs-text logo-green pl-2">Home</a></li>
+
+                <!-- second crumb - programs - provides a link to guide the user to the programs page-->
+                <li class="breadcrumb-item">
+                    <a href="{% url 'items:programs' %}" class="breadcrumbs-text logo-green pl-2">All Programs</a>
+                </li>
+
+                <!-- third crumb - lectures - provides a link to guide the user to all lectures page-->
+                <li class="breadcrumb-item">
+                    <a href="{% url 'items:lectures' %}" class="breadcrumbs-text logo-green pl-2">All lectures</a>
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
