@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from items.models import Program, Lecture
 from django.contrib import messages
 
@@ -14,21 +14,34 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add the item to the cart to the cart """
 
+    program = get_object_or_404(Program, pk=item_id)
+    lecture = get_object_or_404(Lecture, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    program = Program.objects.get(pk=item_id)
-    lecture = Lecture.objects.get(pk=item_id)
     cart = request.session.get('cart', {})
-    if request.POST:
+
+    if program:
         if item_id in list(cart.keys()):
             messages.error(
                 request,
-                'Item already in your cart!\
-                Check your cart to continue purchase.')
+                f'{program.name} already in your\
+                    cart! Check your cart to continue purchase.')
             return redirect(redirect_url)
         else:
             cart[item_id] = quantity
-            messages.success(request, 'Item was added to your cart')
+            messages.success(request, f'Added {program.name} to your bag')
+
+    else:
+        if item_id in list(cart.keys()):
+            messages.error(
+                request,
+                f'{lecture.name} already in your\
+                     cart! Check your cart to continue purchase.')
+            return redirect(redirect_url)
+
+        else:
+            cart[item_id] = quantity
+            messages.success(request, f'Added {lecture.name} to your bag')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
