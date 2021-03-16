@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}Shopping Bag{% endblock %}
+{% block extra_title %}Shopping Cart{% endblock %}
 
 {% block content %}
 <header>
@@ -34,7 +34,7 @@
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
-                                    <th scope="col">Number</th>
+                                    <th scope="col">Product Info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Items</th>
                                     <th scope="col">Price</th>
@@ -43,12 +43,18 @@
 
                             {% for item in cart_items %}
                                 <tr>
-                                    
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid" src="{{ item.program.image.url }}">
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0"><strong>{{ item.program.name }}</strong></p>
+                                        <p class="my-0 small">SKU: {{ item.program.sku}}</p>
+                                    </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                                    <h6><strong>Cart Total: £{ total|floatformat:2 }}</strong></h6>
                                        
                                     
                                 </td>
@@ -70,7 +76,7 @@
                     </div>
                 </div>
                 {% else %}
-                <p class="lead mb-5">Your bag is empty.</p>
+                <p class="lead mb-5">Your cart is empty.</p>
                 <a href="{% url 'items:programs' %}"
                     class="btn btn-lg text-decoration-none bg-logo-green mb-5 d-flex justify-content-center align-items-center"><i
                         class="fas fa-angle-double-left fa-lg me-2"></i> Continue Shopping</a>

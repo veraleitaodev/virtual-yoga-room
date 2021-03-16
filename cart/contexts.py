@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from items.models import Program
 
 
-def cart_objects(request):
+def cart_contents(request):
     """ Makes the cart content available across the whole website """
 
     cart_items = []

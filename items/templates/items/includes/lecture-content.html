@@ -1,28 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
-{% block extra_title %}Programs{% endblock %}
-
-{% block content %}
-<header>
-    {% include 'includes/main-nav.html' %}
-</header>
-
-<section class="margin-top-navbar main-section">
-    <!--Main content-->
-    <div class="container-fluid p-0">
-
-        <!-- breadcrumbs with links -->
-
-        {% include 'items/includes/breadcrumbs.html' %}
-
-        <!-- page heading -->
-        <div class="row">
-            <div class="col text-center my-3">
-                <h4 class="heading-font heading-item pb-2">Lecture Details</h4>
-            </div>
-        </div>
-
-        <!--Details of the program content-->
+<!--Details of the lecture content-->
         <div class="row mx-1 mb-5" id="programDetailRow">
             <div class="col-md-5">
                 <img class="img-fluid shadow-sm" src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -50,13 +26,9 @@
                         {% csrf_token %}
                         <input name="quantity" type="hidden" value="1">
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="submit" class="btn bg-pink btn-lg text-center shadow px-3" value="Add to Cart">
+                        <input type="submit" class="btn bg-pink btn-lg text-center shadow px-3" value="Add Program to Cart">
                     </form>
                     
                 </div>
             </div>
         </div>
-
-    </div>
-</section>
-{% endblock %}
