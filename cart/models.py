@@ -1,5 +1,4 @@
 from django.db import models
-from __future__ import unicode_literals
 
 from profiles.models import UserProfile
 from items.models import Program
