@@ -91,7 +91,8 @@ def all_lectures(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('items:lectures'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -125,6 +126,12 @@ def program_details(request, program_id):
 
     program = get_object_or_404(Program, pk=program_id)
     selected_lectures = program.lecture_set.all()
+
+    # paginator code
+    paginator = Paginator(selected_lectures, 3)
+    page = request.GET.get('page')
+    selected_lectures = paginator.get_page(page)
+
     context = {
         'program': program,
         'selected_lectures': selected_lectures,

@@ -65,7 +65,7 @@
             <div class="row pb-5">
 
                 {% for lecture in selected_lectures %}
-                <div data-aos="fade-right" data-aos-duration="1100" class="col-lg-4">
+                <div data-aos="fade-right" data-aos-duration="1100" class="col-md-4">
                     <div class="card shadow-lg mb-5 mx-4">
                         <div class="card-body text-center">
                             <h5 class="card-title pb-2">{{ lecture.name }}</h5>
@@ -83,8 +83,28 @@
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
+            <div class="row">
+            <div class="col-md-3 offset-4">
+                <ul class="pagination">
+                    {% if product_objects.selected_lectures %}
+                        <li class="page-item">
+                            <a class="text-muted" href="?page={{ product_objects.previous_page_number }}"><i class="fas fa-angle-left"></i></a>
+                        </li>
+                    {% endif %}
+
+                        <li class="page-item active">
+                            <a class="text-muted" href="?page={{ product_objects.number }}"><i class="fas fa-circle-notch"></i></a>
+                        </li>
+
+                    {% if product_objects.has_next %}
+                        <li class="page-item">
+                            <a class="text-muted" href="?page={{ product_objects.next_page_number }}"><i class="fas fa-angle-right"></i></a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
         </div>
     </div>
 </section>
