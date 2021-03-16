@@ -24,34 +24,6 @@
                 <h2 class="heading-font heading-item pb-2">Shopping Cart</h2>
             </div>
         </div>
-        <!--cart content-->
-<div class=" border border-dark rounded mt-3 mb-5 shadow ">    
-    {% for item in cart_items %}
-    <div class="row p-3 border-bottom border-dark">
-         
-        <!-- Items -->
-        <div class="col-12 col-md-6 col-lg-5 offset-lg-1">
-            <h4 class="font-weight-bold">  {{ item.product.name }}</h4>
-            {% if item.product.is_a_service == False %}
-                {% if item.product.sku %}
-                <p class="my-0 small text-muted uppercase">SKU:&nbsp;{{ item.product.sku }}</p>
-                {% endif %}
-            {% endif %}
-
-            <!--Quantity/nubmer of participants-->
-            {% include 'cart/includes/cart_update_form.html' %} 
-        </div>
-
-        <!--Price and subtotal for tablet and desktop-->
-        {% include 'cart/includes/price_subtotal_tablet_desktop.html' %} 
-        
-    </div>
-    {% endfor %}
-
-    <!--Cart Grand Total-->
-    {% include 'cart/includes/cart_total.html' %} 
-</div>
-
         <!--Shopping cart content-->
         <div class="row">
             <div class="col-12">
