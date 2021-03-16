@@ -10,16 +10,15 @@ def cart_contents(request):
     items_count = 0
     cart = request.session.get('cart', {})
 
-    for item_id, item_data in cart.items():
-        if isinstance(item_data, int):
-            program = get_object_or_404(Program, pk=item_id)
-            total += item_data * program.price
-            items_count += item_data
-            cart_items.append({
-                'program': program,
-                'item_id': item_id,
-                'quantity': item_data
-            })
+    for item_id, quantity in cart.items():
+        program = get_object_or_404(Program, pk=item_id)
+        total += quantity * program.price
+        items_count += quantity
+        cart_items.append({
+            'program': program,
+            'item_id': item_id,
+            'quantity': quantity
+        })
 
     context = {
         'cart_items': cart_items,

@@ -19,7 +19,7 @@
             </li>
             <li class="list-group-item text-center mt-3">
                 <!-- Post form to add program to the cart -->
-                <form class="form" action="{% url 'cart:add_to_cart' item.id %}" method="POST">
+                <form class="form" action="{% url 'cart:add_to_cart' program.id %}" method="POST">
                     {% csrf_token %}
                     <input name="quantity" type="hidden" value="1">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">

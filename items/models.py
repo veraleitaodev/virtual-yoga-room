@@ -9,6 +9,9 @@ class Tag(models.Model):
 
 
 class Program(models.Model):
+    class Meta:
+        ordering = ['-id']
+
     CATEGORY = (
         ('Easy', 'Easy'),
         ('Moderate', 'Moderate'),
@@ -33,6 +36,8 @@ class Program(models.Model):
 
 
 class Lecture(models.Model):
+    class Meta:
+        ordering = ['-id']
 
     sku = models.CharField(max_length=254)
     name = models.CharField(max_length=254)
