@@ -41,7 +41,7 @@
                                 <li class="list-group-item text-muted">£{{ program.price }}</li>
                             </ul>
                             <div class="card-body d-flex justify-content-evenly my-2">
-                                 <form class="form" action="" method="POST">
+                                 <form class="form" action="{% url 'cart:add_to_cart' program.id %}" method="POST">
                                     {% csrf_token %}
                                     <input name="quantity" type="hidden" value="1">
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
