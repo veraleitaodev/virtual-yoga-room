@@ -47,7 +47,6 @@ class Lecture(models.Model):
     video = models.URLField(max_length=1024, blank=True)
     image_url = models.URLField(max_length=1024, blank=True)
     image = models.ImageField()
-    price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
     rating = models.DecimalField(
         max_digits=6, decimal_places=1, null=True, blank=True)
     instructor = models.CharField(max_length=254)

@@ -24,17 +24,15 @@
                 <li class="list-group-item dark-pink"><i class="fas fa-thermometer-half me-2 "></i> {{ lecture.program.category }}</li>
                 <li class="list-group-item text-muted">{{ lecture.instructor }}</li>
                 <li class="list-group-item">
-                    <small class="text-muted logo-green"><i
-                            class="fas fa-star logo-green pr-2"></i> {{ lecture.rating }} / 5</small>
-                        </li>
-                <li class="list-group-item text-muted">£{{ lecture.price }}</li>
+                    <small class="text-muted logo-green"><i class="fas fa-star logo-green pr-2"></i> {{ lecture.rating }} / 5</small>
+                </li>
             </ul>
             <div class="card-body d-flex justify-content-evenly my-2">
-                <form class="form" action="" method="POST">
+                <form class="form" action="{% url 'cart:add_to_cart' lecture.program.id %}" method="POST">
                     {% csrf_token %}
                     <input name="quantity" type="hidden" value="1">
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    <input type="submit" class="btn bg-pink text-center shadow px-3" value="Add to Cart">
+                    <input type="submit" class="btn bg-pink text-center shadow px-3" value="Buy Program">
                 </form>
                 <a href="{% url 'items:lecture_details' lecture.id %}" class="btn btn-outline-dark text-center "><small>More Details</small></a>
             </div>
