@@ -128,13 +128,18 @@ def program_details(request, program_id):
     selected_lectures = program.lecture_set.all()
 
     # paginator code
-    paginator = Paginator(selected_lectures, 3)
-    page = request.GET.get('page')
-    selected_lectures = paginator.get_page(page)
+    paginator = Paginator(selected_lectures, 2)
+    pageMd = request.GET.get('page')
+    pageLg = request.GET.get('page')
+    selected_lectures_md = paginator.get_page(pageMd)
+    paginatorLg = Paginator(selected_lectures, 3)
+    selected_lectures_lg = paginatorLg.get_page(pageLg)
 
     context = {
         'program': program,
         'selected_lectures': selected_lectures,
+        'selected_lectures_md': selected_lectures_md,
+        'selected_lectures_lg': selected_lectures_lg,
     }
 
     return render(request, 'items/program-details.html', context)

@@ -31,49 +31,49 @@
 </div>
 
 <!-- Lectures included in the program -->
+<!-- custom owl carousel of selected lectures with pagination logic not displaying cards for mobile view -->
 <div class="container-fluid bg-offwhite p-0 m-0" id="selectedLectures">
     <div class="row mt-3 py-3">
         <div class="col-12">
-            <p class="text-center"><strong>{{ program.number_lectures }} Lectures Included</strong></p>
-            <h5 class="text-center pb-2">Program: {{ program.name }} </h5>
+            <p class="text-center"><i class="fas fa-spa pink me-2"> | </i><strong>{{ program.number_lectures }} Lectures Included</strong></p>
+            <h5 class="text-center d-none d-md-block pb-2">Program: {{ program.name }} </h5>
         </div>
     </div>
-    <div class="row pb-2">
 
-        {% for lecture in selected_lectures %}
-        <div data-aos="fade-right" data-aos-duration="1100" class="col-md-4">
-            <div class="card shadow-lg mb-5 mx-4">
-                <div class="card-body text-center">
-                    <h5 class="card-title pb-2">{{ lecture.name }}</h5>
-                    <ul class="list-group list-group-flush text-center">
-                        <li class="list-group-item text-muted"></li>
-                        <li class="list-group-item"><small class="text-muted logo-green"><i
-                                    class="fas fa-star logo-green pr-2"></i> {{ lecture.rating }} / 5</small>
-                        </li>
-                    </ul>
-                    <div class="card-body d-flex justify-content-center my-2">
-                        <a href="{% url 'items:lecture_details' lecture.id %}" class="btn bg-logo-green white small-btn text-center">More
-                            Info</a>
-                    </div>
-                </div>
-            </div>
+    <!-- costum carousel of with pagination logic  not displaying cards for mobile view -->
+    <div class="row d-none d-md-flex d-lg-none pb-2">
+
+        {% for lecture in selected_lectures_md %}
+        <div data-aos="fade-right" data-aos-duration="1100" class="col-md-6">
+            {% include 'items/includes/selected-lectures.html' %}
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row d-none d-lg-flex pb-2">
+
+        {% for lecture in selected_lectures_lg %}
+        <div data-aos="fade-right" data-aos-duration="1100" class="col-lg-4">
+            {% include 'items/includes/selected-lectures.html' %}
         </div>
         {% endfor %}
     </div>
 
-    <!-- costum caroussel of 3 items with pagination logic -->
-    <div class="row pb-5">
-        <div class="col-md-4 offset-4">
+    <!-- costum carousel of with pagination logic  not displaying cards for mobile view -->
+
+    <!-- previous and next arrows layout for medium size screens -->
+    <div class="row d-none d-md-flex d-lg-none pb-5">
+        <div class="col-md-6 offset-3">
             <ul class="pagination d-flex justify-content-center">
 
-                {% if selected_lectures.has_previous %}
+                {% if selected_lectures_md.has_previous %}
                 <li class="page-item">
-                    <a class="text-decoration-none dark-pink me-5" href="?page={{ selected_lectures.previous_page_number }} #selectedLectures"><i
+                    <a class="text-decoration-none d-flex align-items-center dark-pink shadow px-2 py-1 me-5"
+                        href="?page={{ selected_lectures_md.previous_page_number }} #selectedLectures"><i
                             class="fas fa-angle-left fa-lg"></i></a>
                 </li>
                 {% else %}
                 <li class="page-item">
-                    <p class="text-decoration-none text-muted me-5" >
+                    <p class="text-decoration-none text-muted me-5">
                         <i class="fas fa-angle-left fa-lg"></i>
                     </p>
                 </li>
@@ -83,20 +83,62 @@
                     <p class="text-decoration-none text-muted me-5"><i class="far fa-circle"></i></p>
                 </li>
 
-                {% if selected_lectures.has_next %}
+                {% if selected_lectures_md.has_next %}
                 <li class="page-item">
-                    <a class="dark-pink text-decoration-none" href="?page={{ selected_lectures.next_page_number }} #selectedLectures"><i
+                    <a class="dark-pink shadow px-2 py-1 d-flex align-items-center text-decoration-none"
+                        href="?page={{ selected_lectures_md.next_page_number }} #selectedLectures"><i
                             class="fas fa-angle-right fa-lg"></i></a>
                 </li>
                 {% else %}
                 <li class="page-item">
-                    <p class="text-decoration-none text-muted me-5" >
+                    <p class="text-decoration-none text-muted me-5">
                         <i class="fas fa-angle-right fa-lg"></i>
                     </p>
                 </li>
                 {% endif %}
             </ul>
-            
+
+        </div>
+    </div>
+
+    <!--layout of previous and next buttons for large screens and bigger -->
+    <div class="row d-none d-lg-flex pb-5">
+        <div class="col-md-4 offset-4">
+            <ul class="pagination d-flex justify-content-center">
+
+                {% if selected_lectures_lg.has_previous %}
+                <li class="page-item">
+                    <a class="text-decoration-none dark-pink d-flex align-items-center shadow px-2 py-1 me-5"
+                        href="?page={{ selected_lectures_lg.previous_page_number }} #selectedLectures"><i
+                            class="fas fa-angle-left fa-lg"></i></a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <p class="text-decoration-none text-muted me-5">
+                        <i class="fas fa-angle-left fa-lg"></i>
+                    </p>
+                </li>
+                {% endif %}
+
+                <li class="page-item">
+                    <p class="text-decoration-none text-muted me-5"><i class="far fa-circle"></i></p>
+                </li>
+
+                {% if selected_lectures_lg.has_next %}
+                <li class="page-item">
+                    <a class="dark-pink shadow px-2 py-1 d-flex align-items-center text-decoration-none"
+                        href="?page={{ selected_lectures_lg.next_page_number }} #selectedLectures"><i
+                            class="fas fa-angle-right fa-lg"></i></a>
+                </li>
+                {% else %}
+                <li class="page-item">
+                    <p class="text-decoration-none text-muted me-5">
+                        <i class="fas fa-angle-right fa-lg"></i>
+                    </p>
+                </li>
+                {% endif %}
+            </ul>
+
         </div>
     </div>
 </div>
