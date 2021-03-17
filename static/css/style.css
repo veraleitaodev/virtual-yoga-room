@@ -237,7 +237,6 @@ input#id_name {
 }
 
 /*=== back to top button ===*/
-/*-- back to top button --*/
 
 .back-top-btn {
     height: 42px;
@@ -257,6 +256,12 @@ input#id_name {
 .back-top-link i:hover {
     text-shadow: none;
     background-color: #0D0D0D;
+}
+
+/*=== cart ===*/
+
+#shopping-cart img.img-fluid {
+    width: 300px;
 }
 
 @media (min-width: 768px) {
