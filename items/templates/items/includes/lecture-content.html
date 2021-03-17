@@ -1,4 +1,4 @@
-<!--Details of the lecture content-->
+<!-- Details of the lecture content -->
         <div class="row mx-1 mb-5" id="programDetailRow">
             <div class="col-md-5">
                 <img class="img-fluid shadow-sm" src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -18,17 +18,18 @@
                             {{ item.rating }} / 5</small>
                     </li>
                 </ul>
-                <div class="d-flex justify-content-center my-2">
-                    <a href="{% url 'items:programs' %}"
-                        class="btn btn-lg text-decoration-none btn-outline-dark mb-5 me-2 d-flex justify-content-center align-items-center"><i
-                            class="fas fa-angle-double-left fa-lg me-2"></i> Continue Shopping</a>
-                    <form class="form" action="" method="POST">
-                        {% csrf_token %}
-                        <input name="quantity" type="hidden" value="1">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <input type="submit" class="btn bg-pink btn-lg text-center shadow px-3" value="Add Program to Cart">
-                    </form>
-                    
+                <div class="card-body row my-2">
+                    <div class="d-flex justify-content-center col-12 col-md-6">
+                        <form class="form" action="{% url 'cart:add_to_cart' item.program.id %}" method="POST">
+                            {% csrf_token %}
+                            <input name="quantity" type="hidden" value="1">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <input type="submit" class="btn bg-pink text-center shadow px-3" value="Buy Program">
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-center col-12 col-md-6">
+                        <a href="{% url 'items:program_details' item.program.id %}" class="btn btn-outline-dark text-center "><small>Program Details</small></a>
+                    </div>
                 </div>
             </div>
         </div>
