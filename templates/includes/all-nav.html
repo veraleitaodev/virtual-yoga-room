@@ -1,187 +1,204 @@
-{% load static %} 
- 
- <div class="row d-row-flex justify-content-end px-0 pb-2">
-            <div class="col-10">
+{% load static %}
 
-                <!-- SMALL SCREENS - FIRST ROW only displays icons for my account | search | shopping cart  -->
-                <ul class=" nav list-inline d-flex d-md-none justify-content-end list-unstyled me-auto txt-center w-100">
-                     <!-- Account Icon with dropdown -->
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown"
-                        aria-expanded="false" data-bs-placement="bottom" title="My Account">
-                            <div class="text-center white">
-                                <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <li><a class="dropdown-item" href="">Item Management</a></li>
-                            {% endif %}
-                                <li><a class="dropdown-item" href="">My Profile</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                            {% else %}
-                                <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                                <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
-                            {% endif %}
-                        </ul>
-                    </li>
-                    <li class="list-inline-item dropdown">
+<div class="row d-row-flex justify-content-end px-0 pb-2">
+    <div class="col-10">
 
-                         <!-- Search Icon with dropdown box-->
-                        <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div><i class="fas fa-search white"></i></div>
-                        </a>
-                        <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
-                            <form class="form" method="GET" action="{% url 'items:lectures' %}">
-                                <div class="input-group w-100">
-                                    <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="form-control form-control btn btn-dark" type="submit">
-                                            <span class="white">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                    <!-- Shopping cart Icon -->
-                    <li class="list-inline-item ">
-                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="{% url 'cart:view_cart' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- MEDIUM AND LARGER SCREENS - FIRST ROW display badger and words 'login' and 'register' -->
-                <ul class=" nav list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
-
+        <!-- SMALL SCREENS - FIRST ROW only displays icons for my account | search | shopping cart  -->
+        <ul class=" nav list-inline d-flex d-md-none justify-content-end list-unstyled me-auto txt-center w-100">
+            <!-- Account Icon with dropdown -->
+            <li class="list-inline-item dropdown">
+                <a class="nav-link" type="text" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                    data-bs-placement="bottom" title="My Account">
+                    <div class="text-center white">
+                        <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="My Account"></i></div>
+                    </div>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                     {% if request.user.is_authenticated %}
-                    <!-- Account Icon with dropdown -->
-                    <li class="list-inline-item dropdown">
-                        <a class="nav-link" type="text" id="dropdownMenu1" data-bs-toggle="dropdown"
-                        aria-expanded="false" data-bs-placement="bottom" title="My Account">
-                            <div class="text-center white">
-                                <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom" title="My Account"></i></div>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu1">
-                             
-                            {% if request.user.is_superuser %}
-                            <li><a class="dropdown-item" href="">Item Management</a></li>
-                            {% endif %}
-                            <li><a class="dropdown-item" href="">My Profile</a></li>
-                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                        </ul>
-                    </li>
-                    {% else %}
-                     <li class="list-inline-item li-item-margin white pr-5 pt-2" href="{% url 'account_signup' %}">Register</li>
-                     <li class="list-inline-item white pr-3 pt-2" href="{% url 'account_login' %}">Login</li>
+                    {% if request.user.is_superuser %}
+                    <li><a class="dropdown-item" href="">Item Management</a></li>
                     {% endif %}
-
-                    <li class="list-inline-item dropdown">
-
-                         <!-- Search Icon with dropdown box-->
-                        <a class="nav-link" href="#" id="iconSearch" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div><i class="fas fa-search white"></i></div>
-                        </a>
-                        <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
-                            <form class="form" method="GET" action="{% url 'items:lectures' %}">
-                                <div class="input-group w-100">
-                                    <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
-                                    <div class="input-group-append">
-                                        <button class="form-control form-control btn btn-dark" type="submit">
-                                            <span class="white">
-                                                <i class="fas fa-search"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                    <!-- Shopping cart Icon -->
-                    <li class="list-inline-item ">
-                        <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link" href="{% url 'cart:view_cart' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Shopping Cart"></i></div>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- start now badger -->
-                    <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2" role="button" href=""><strong>Start Now</strong></li>
-
+                    <li><a class="dropdown-item" href="">My Profile</a></li>
+                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                    {% else %}
+                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
-                
-            </div>
-        </div>
+            </li>
+            <li class="list-inline-item dropdown">
 
-        <!-- second row of Navbar > Collapsible navbar with bootstrap framework-->
-        <nav class="navbar row d-flex align-items-end navbar-expand-lg navbar-light px-3" id="navbar-colour" role="navigation">
-            <div class="container-fluid">
-                
-                <!-- logo with text to display in medium and larger screens -->
-                <a class="navbar-brand white d-none d-md-flex" href="{% url 'home:home' %}">
-                    <img src="{% static 'images/logo-white.png' %}"
-                        alt="logo" class="logo-nav"/><span class="logo-text d-flex align-items-end pl-2">| Virtual Yoga Room</span>
+                <!-- Search Icon with dropdown box-->
+                <a class="nav-link" href="#" id="icon-search" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <div><i class="fas fa-search white"></i></div>
                 </a>
-                <!-- logo only to display in small screens -->
-                <a class="navbar-brand white d-flex d-md-none" href="{% url 'home:home' %}">
-                    <img src="{% static 'images/logo-white.png' %}"
-                        alt="logo" class="logo-nav"/>
+                <div class="dropdown-menu w-100 py-0" aria-labelledby="icon-search">
+                    <form class="form" method="GET" action="{% url 'items:lectures' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control form-control btn btn-dark" type="submit">
+                                    <span class="white">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- Shopping cart Icon -->
+            <li class="list-inline-item ">
+                <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link"
+                    href="{% url 'cart:view_cart' %}">
+                    <div class="text-center">
+                        <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Shopping Cart"></i></div>
+                    </div>
                 </a>
+            </li>
+        </ul>
 
-                <!-- collapsible menu button with links  -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span><i class="fas fa-bars white"></i></span>
-                </button>
-                
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-                        
-                        <!-- lectures link -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link white t p-3" id="lecture-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Lectures</a>
-                            <ul class="dropdown-menu border-0" aria-labelledby="lecture-link">
-                                <li><a href="{% url 'items:lectures' %}?sort=program&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a></li>
-                                <li><a href="{% url 'items:lectures' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Lectures</a></li>
-                            </ul>
-                        </li>
-                        <!-- Programs link -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link white t p-3" id="program-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">Programs</a>
-                            <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
-                                <li><a href="{% url 'items:programs' %}?sort=category&direction=asc" class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a></li>
-                                <li><a href="{% url 'items:programs' %}" class="dropdown-item-text text-decoration-none black letter-dropdown">All Programs</a></li>
-                            </ul>
-                        </li>
-                        <!-- About link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="#">About</a>
-                        </li>
+        <!-- MEDIUM AND LARGER SCREENS - FIRST ROW display badger and words 'login' and 'register' -->
+        <ul class=" nav list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
 
-                        <!-- Team link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="#">Team</a>
-                        </li>
+            {% if request.user.is_authenticated %}
+            <!-- Account Icon with dropdown -->
+            <li class="list-inline-item dropdown">
+                <a class="nav-link" type="text" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"
+                    data-bs-placement="bottom" title="My Account">
+                    <div class="text-center white">
+                        <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="My Account"></i></div>
+                    </div>
+                </a>
+                <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu1">
 
-                        
-                        <!-- Contact link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="#">Contact</a>
-                        </li>
+                    {% if request.user.is_superuser %}
+                    <li><a class="dropdown-item" href="">Item Management</a></li>
+                    {% endif %}
+                    <li><a class="dropdown-item" href="">My Profile</a></li>
+                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                </ul>
+            </li>
+            {% else %}
+            <li class="list-inline-item li-item-margin white pr-5 pt-2" href="{% url 'account_signup' %}">Register</li>
+            <li class="list-inline-item white pr-3 pt-2" href="{% url 'account_login' %}">Login</li>
+            {% endif %}
 
-                         <!-- Blog link -->
-                        <li class="nav-item">
-                            <a class="nav-link white p-3" href="{% url 'blog:all_blogs' %}">Blog</a>
+            <li class="list-inline-item dropdown">
+
+                <!-- Search Icon with dropdown box-->
+                <a class="nav-link" href="#" id="iconSearch" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <div><i class="fas fa-search white"></i></div>
+                </a>
+                <div class="dropdown-menu w-100 py-0" aria-labelledby="iconSearch">
+                    <form class="form" method="GET" action="{% url 'items:lectures' %}">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-dark" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control form-control btn btn-dark" type="submit">
+                                    <span class="white">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </li>
+            <!-- Shopping cart Icon -->
+            <li class="list-inline-item ">
+                <a class="{% if grand_total %}pink font-weight-bold{% else %}white{% endif %} nav-link"
+                    href="{% url 'cart:view_cart' %}">
+                    <div class="text-center">
+                        <div><i class="fas fa-shopping-cart fa-md" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                title="Shopping Cart"></i></div>
+                    </div>
+                </a>
+            </li>
+            <!-- start now badger displaying in medium and bigger screens -->
+            <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2"
+                role="button" href="{% url 'items:programs' %}"><strong>Start Now</strong></li>
+
+        </ul>
+
+    </div>
+</div>
+
+<!-- second row of Navbar > Collapsible navbar with bootstrap framework-->
+<nav class="navbar row d-flex align-items-end navbar-expand-lg navbar-light px-3" id="navbar-colour" role="navigation">
+    <div class="container-fluid">
+
+        <!-- logo with text to display in medium and larger screens -->
+        <a class="navbar-brand white d-none d-md-flex" href="{% url 'home:home' %}">
+            <img src="{% static 'images/logo-white.png' %}" alt="logo" class="logo-nav" /><span
+                class="logo-text d-flex align-items-end pl-2">| Virtual Yoga Room</span>
+        </a>
+        <!-- logo only to display in small screens -->
+        <a class="navbar-brand white d-flex d-md-none" href="{% url 'home:home' %}">
+            <img src="{% static 'images/logo-white.png' %}" alt="logo" class="logo-nav" />
+        </a>
+
+        <!-- collapsible menu button with links  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="fas fa-bars white"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <!-- lectures link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link white t p-3" id="lecture-link" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" href="">Lectures</a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="lecture-link">
+                        <li><a href="{% url 'items:lectures' %}?sort=program&direction=asc"
+                                class="dropdown-item-text text-decoration-none black letter-dropdown">By Program</a>
+                        </li>
+                        <li><a href="{% url 'items:lectures' %}"
+                                class="dropdown-item-text text-decoration-none black letter-dropdown">All Lectures</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </nav>
+                </li>
+                <!-- Programs link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link white t p-3" id="program-link" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" href="">Programs</a>
+                    <ul class="dropdown-menu border-0" aria-labelledby="gallery-link">
+                        <li><a href="{% url 'items:programs' %}?sort=category&direction=asc"
+                                class="dropdown-item-text text-decoration-none black letter-dropdown">By Category</a>
+                        </li>
+                        <li><a href="{% url 'items:programs' %}"
+                                class="dropdown-item-text text-decoration-none black letter-dropdown">All Programs</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- About link -->
+                <li class="nav-item">
+                    <a class="nav-link white p-3" href="#">About</a>
+                </li>
+
+                <!-- Team link -->
+                <li class="nav-item">
+                    <a class="nav-link white p-3" href="#">Team</a>
+                </li>
+
+
+                <!-- Contact link -->
+                <li class="nav-item">
+                    <a class="nav-link white p-3" href="#">Contact</a>
+                </li>
+
+                <!-- Blog link -->
+                <li class="nav-item">
+                    <a class="nav-link white p-3" href="{% url 'blog:all_blogs' %}">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
