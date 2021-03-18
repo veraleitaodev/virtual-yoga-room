@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    "crispy_bootstrap5",
     'home',
     'profiles',
     'questions',
@@ -61,6 +63,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'virtual_yoga_room.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 TEMPLATES = [
     {
