@@ -1,0 +1,30 @@
+{% load static %}
+<!--Remove button -->
+<p class="d-flex justify-content-end">
+    <a class="remove-item" href="{% url 'cart:remove_from_cart' item.item_id %}">
+        <i class="fas fa-times lead logo-green"></i>
+    </a>
+
+</p>
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" 
+     aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Remove&nbsp;Item</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-red">
+            <i class="fas fa-exclamation-circle text-danger"></i>
+            Are you sure you want to remove <br/><span class="font-weight-bold">{{ item.program.name }}</span> from your cart?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger text-white">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
