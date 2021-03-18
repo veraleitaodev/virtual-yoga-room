@@ -172,6 +172,10 @@ li.list-inline-item.li-item-margin {
     letter-spacing: 1.5px;
 }
 
+input[name='q']::placeholder{
+    color:#aab7c4;
+}
+
 /*-- Hover --*/
 a.nav-link:hover {
     color: #819FA6 !important;;
@@ -201,7 +205,6 @@ width: 100%;
 }
 
 /*=== home page ===*/
-/*--- Promotional section ---*/
 .promotional-image {
     background: url(https://res.cloudinary.com/veraleitao/image/upload/v1612890786/yoga-white-room_b7geqm.jpg) no-repeat bottom center;
     background-size:cover;
@@ -264,11 +267,40 @@ input#id_name {
     width: 300px;
 }
 
-/*=== login ===*/
-button.primaryAction:hover {
+/*=== allauth ===*/
+.allauth-form-inner-content label:not([for='id_remember']){
+    display: none;
+}
+.allauth-form-inner-content input::placeholder{
+    color:#aab7c4;
+}
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
     color: white !important;
     background-color: black !important;
 }
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #8C7484;
+    border: 1px solid #8C7484;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+
 @media (min-width: 768px) {
     .logo-nav {
         max-width: 40px;
