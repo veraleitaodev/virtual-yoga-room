@@ -264,6 +264,11 @@ input#id_name {
     width: 300px;
 }
 
+/*=== login ===*/
+button.primaryAction:hover {
+    color: white !important;
+    background-color: black !important;
+}
 @media (min-width: 768px) {
     .logo-nav {
         max-width: 40px;
