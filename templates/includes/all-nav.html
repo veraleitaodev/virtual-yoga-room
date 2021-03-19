@@ -14,18 +14,18 @@
                                 title="My Account"></i></div>
                     </div>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <div class="dropdown-menu nav-authentication-items" aria-labelledby="dropdownMenu">
                     {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
-                    <li><a class="dropdown-item" href="">Item Management</a></li>
+                    <a class="dropdown-item" href="">Item Management</a>
                     {% endif %}
-                    <li><a class="dropdown-item" href="">My Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                    <a class="dropdown-item" href="">My Profile</a>
+                    <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
                     {% else %}
-                    <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                    <a class="dropdown-item" href="{% url 'account_signup' %}">Register</a>
+                    <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
                     {% endif %}
-                </ul>
+                </div>
             </li>
             <li class="list-inline-item dropdown">
 
@@ -62,30 +62,30 @@
         </ul>
 
         <!-- MEDIUM AND LARGER SCREENS - FIRST ROW display badger and words 'login' and 'register' -->
-        <ul class=" nav list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
+        <ul class=" nav nav-authentication-items list-inline d-none d-md-flex justify-content-end list-unstyled me-auto txt-center w-100">
 
             {% if request.user.is_authenticated %}
-            <!-- Account Icon with dropdown -->
-            <li class="list-inline-item dropdown">
-                <a class="nav-link" type="text" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"
-                    data-bs-placement="bottom" title="My Account">
-                    <div class="text-center white">
-                        <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                title="My Account"></i></div>
-                    </div>
-                </a>
-                <ul class="dropdown-menu border-0" aria-labelledby="dropdownMenu1">
+                <!-- Account Icon with dropdown -->
+                <div class="list-inline-item dropdown">
+                    <a class="nav-link" type="text" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-placement="bottom" title="My Account">
+                        <div class="text-center white">
+                            <div><i class="fas fa-user-alt" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="My Account"></i></div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="dropdownMenu1">
 
-                    {% if request.user.is_superuser %}
-                    <li><a class="dropdown-item" href="">Item Management</a></li>
-                    {% endif %}
-                    <li><a class="dropdown-item" href="">My Profile</a></li>
-                    <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
-                </ul>
-            </li>
+                        {% if request.user.is_superuser %}
+                        <a class="dropdown-item" href="">Item Management</a>
+                        {% endif %}
+                        <a class="dropdown-item" href="">My Profile</a>
+                        <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+                    </div>
+                </div>
             {% else %}
-            <li class="list-inline-item li-item-margin white pr-5 pt-2" href="{% url 'account_signup' %}">Register</li>
-            <li class="list-inline-item white pr-3 pt-2" href="{% url 'account_login' %}">Login</li>
+                <a class="list-inline-item text-decoration-none li-item-margin white pr-5 pt-2" href="{% url 'account_signup' %}">Register</a>
+                <a class="list-inline-item text-decoration-none white pr-3 pt-2" href="{% url 'account_login' %}">Login</a>
             {% endif %}
 
             <li class="list-inline-item dropdown">
@@ -121,8 +121,10 @@
                 </a>
             </li>
             <!-- start now badger displaying in medium and bigger screens -->
-            <li class="list-inline-item li-item-margin badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2"
-                role="button" href="{% url 'items:programs' %}"><strong>Start Now</strong></li>
+            <li class="list-inline-item li-item-margin">
+                <a class="badge bg-logo-green transparent d-flex align-items-center shadow mt-2 mb-2"
+                    role="button" href="{% url 'items:programs' %}"><strong>Start Now</strong></a>
+            </li>
 
         </ul>
 
