@@ -32,12 +32,18 @@
 </head>
 
   <body>
+    {% if messages %}
+        <div class="message-container">
+           
+        </div>
+    {% endif %}
+
     
     {% block content %}
     {% endblock %}
 
      {% include 'includes/bttbutton.html' %}
-    <footer>
+    <footer class="{% block footer_class %}{% endblock %}">
         {% include 'includes/footer.html' %}
     </footer>
 
