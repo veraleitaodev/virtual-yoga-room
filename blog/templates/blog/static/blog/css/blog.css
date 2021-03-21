@@ -1,0 +1,7 @@
+.profile-form-input::placeholder {
+    color:#819FA6;
+}
+
+#id_body .form-control {
+    color: black;
+}

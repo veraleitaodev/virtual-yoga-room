@@ -59,9 +59,9 @@
                         <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
                         <div>
                             <form method="POST">
-                                {{ comment_form.as_p }}
+                                {{ comment_form|crispy }}
                                 {% csrf_token %}
-                                    <button type="submit" class="btn bg-white dark-pink btn shadow">Submit</button>
+                                    <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
                             </form>
                         </div>
                     {% endif%}
