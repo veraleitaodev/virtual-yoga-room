@@ -22,6 +22,8 @@ def blog_details(request, blog_id):
 
             # Create Comment object but does not save to db
             new_comment = comment_form.save(commit=False)
+            # checks user is the one making the comments
+            new_comment.username = request.username
             # assign the current blog to the comment
             new_comment.blog = blog
             # save the comment to the db
