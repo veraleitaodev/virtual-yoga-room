@@ -14,15 +14,16 @@ class BlogAdmin(admin.ModelAdmin):
 
 
 class CommentAdmin(admin.ModelAdmin):
-    readonly_fields = ('date',)
+    readonly_fields = ('date', 'user', 'blog', 'comment')
 
     list_display = (
         'blog',
-        'username',
-        'active'
+        'active',
+        'date',
+        'user'
     )
     list_filter = ('active', 'date')
-    search_fields = ('username', 'comment')
+    search_fields = ('user', 'comment')
     actions = ['approve_comments']
 
     def approve_comments(self, request, queryset):

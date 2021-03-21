@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block extra_title %}Post Details{% endblock %}
+{% block extra_title %}Blog Details{% endblock %}
 
 {% block content %}
 <header>
@@ -39,32 +39,34 @@
                 <p><em>{{ comments.count }} comment{{comments.count|pluralize}}</em><i class="fas fa-meteor pink"></i></p>
 
                 <!--display of all comments related to the post-->
-                {% for comment in comments %}
+                {% for post in comments %}
                     {% autoescape on %}
-                        <p>{{ comment.body }}</p>
+                        <p>{{ post.comment }}</p>
+                        <p>{{ post.user.username }}</p>
                     {% endautoescape %}
-                    <p class="text-muted"><small>{{ comment.name }}</small></p>
-                    <p class="text-muted"><small>{{ blog.date|date:'D M Y'}}</small></p> 
+                    <p class="text-muted"><small>{{ post.date|date:'d M Y'}}</small></p> 
             
                 {% endfor %}
             </div>
 
             <div class="col-10 offset-1 mb-5">
                 <div class="card-body">
-                    {% if new_comment %}
-                        <div class="alert alert-success" role="alert">
-                            Your comment is waiting moderation
-                        </div>
-                    {% else %}
-                        <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
-                        <div>
-                            <form method="POST">
-                                {{ comment_form|crispy }}
-                                {% csrf_token %}
-                                    <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
-                            </form>
-                        </div>
-                    {% endif%}
+                    {% if user.is_authenticated %}
+                        {% if new_comment %}
+                            <div class="alert alert-success" role="alert">
+                                Your comment is waiting moderation
+                            </div>
+                        {% else %}
+                            <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
+                            <div>
+                                <form method="POST">
+                                    {{ comment_form|crispy }}
+                                    {% csrf_token %}
+                                        <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
+                                </form>
+                            </div>
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </div>

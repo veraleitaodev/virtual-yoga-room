@@ -23,7 +23,7 @@ def all_programs(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                programs = lectures.annotate(lower_name=Lower('name'))
+                programs = programs.annotate(lower_name=Lower('name'))
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -33,7 +33,8 @@ def all_programs(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!")
                 return redirect(reverse('items:programs'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)

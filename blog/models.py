@@ -18,10 +18,11 @@ class Comment(models.Model):
     comment = models.CharField(max_length=300, null=False, blank=False)
     date = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=False)
-    username = models.ForeignKey(User, on_delete=models.RESTRICT)
+    user = models.ForeignKey(
+        User, null=True, on_delete=models.SET_NULL)
 
     class Meta:
         ordering = ['date']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.username)
+        return self.comment

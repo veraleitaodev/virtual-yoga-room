@@ -1,6 +1,5 @@
 
 from django.shortcuts import render, redirect, HttpResponse
-from items.models import Program
 from django.contrib import messages
 
 
