@@ -190,8 +190,10 @@ a.nav-link:hover {
 
 button.btn:hover,
 button strong:hover {
-    color: #0D0D0D;
+    color: #0D0D0D !important;
     background: transparent !important;
+    border-color: #0D0D0D !important;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 /* === Hero homepage === */

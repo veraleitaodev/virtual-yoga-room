@@ -21,6 +21,7 @@ def profile(request):
     context = {
         'profile': profile,
         'form': form,
+        'on_profile_page': True,
     }
 
     return render(request, template, context)
