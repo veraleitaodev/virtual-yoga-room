@@ -49,24 +49,22 @@
                 {% endfor %}
             </div>
 
-            <div class="col-10 offset-1 mb-5">
+           <div class="col-10 offset-1 mb-5">
                 <div class="card-body">
-                    {% if user.is_authenticated %}
-                        {% if new_comment %}
-                            <div class="alert alert-success" role="alert">
-                                Your comment is waiting moderation
-                            </div>
-                        {% else %}
-                            <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
-                            <div>
-                                <form method="POST">
-                                    {{ comment_form|crispy }}
-                                    {% csrf_token %}
-                                        <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
-                                </form>
-                            </div>
-                        {% endif %}
-                    {% endif %}
+                    {% if new_comment %}
+                        <div class="alert alert-success" role="alert">
+                            Your comment is waiting moderation
+                        </div>
+                    {% else %}
+                        <p class="text-decoration-none logo-green"><i class="far fa-edit me-1"></i> Leave a comment</p>
+                        <div>
+                            <form method="POST">
+                                {{ comment_form|crispy }}
+                                {% csrf_token %}
+                                    <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
+                            </form>
+                        </div>
+                    {% endif%}
                 </div>
             </div>
         </div>
