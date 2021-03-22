@@ -1,5 +1,5 @@
 from django.shortcuts import render,  get_object_or_404
-from .models import Blog
+from .models import Blog, Comment
 from .forms import CommentForm
 
 
@@ -12,6 +12,17 @@ def all_blogs(request):
 def blog_details(request, blog_id):
     blog = get_object_or_404(Blog, pk=blog_id)
     comments = blog.comments.filter(active=True).order_by("-date")
+    comment_form = CommentForm()
+
+    return render(request, 'blog/blog-details.html', {
+        'blog': blog,
+        'comments': comments,
+        'comment_form': comment_form,
+    })
+
+
+def add_comment(request, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
     new_comment = None
     comment_form = CommentForm()
 
@@ -31,10 +42,22 @@ def blog_details(request, blog_id):
             new_comment.save()
         else:
             comment_form = CommentForm()
-
-    return render(request, 'blog/blog-details.html', {
+    context = {
         'blog': blog,
-        'comments': comments,
         'comment_form': comment_form,
         'new_comment': new_comment
-    })
+    }
+    template = ('blog/blog-details.html')
+    return render(request, template, context)
+
+
+def update_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    comment_form = CommentForm(instance=comment)
+
+    context = {
+        'comment': comment,
+        'comment_form': comment_form,
+    }
+
+    return render(request, 'blog/comment-update.html', context)

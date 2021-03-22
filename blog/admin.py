@@ -20,7 +20,8 @@ class CommentAdmin(admin.ModelAdmin):
         'blog',
         'active',
         'date',
-        'user'
+        'user',
+        'id',
     )
     list_filter = ('active', 'date')
     search_fields = ('user', 'comment')

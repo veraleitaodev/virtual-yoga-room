@@ -37,15 +37,15 @@
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-5">
                 <p><em>{{ comments.count }} comment{{comments.count|pluralize}}</em><i class="fas fa-meteor pink"></i></p>
-
+                <hr>
                 <!--display of all comments related to the post-->
                 {% for post in comments %}
                     {% autoescape on %}
                         <p>{{ post.comment }}</p>
-                        <p>{{ post.user.username }}</p>
+                        <p class="text-muted">{{ post.user.username }}</p>
                     {% endautoescape %}
                     <p class="text-muted"><small>{{ post.date|date:'d M Y'}}</small></p> 
-            
+                    <hr>
                 {% endfor %}
             </div>
 
@@ -64,7 +64,7 @@
                                     <button type="submit" class="btn white bg-dark-pink shadow">Submit</button>
                             </form>
                         </div>
-                    {% endif%}
+                    {% endif %}
                 </div>
             </div>
         </div>
