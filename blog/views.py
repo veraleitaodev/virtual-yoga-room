@@ -60,7 +60,8 @@ def add_comment(request, blog_id):
 
 
 @login_required
-def update_comment(request, comment_id):
+def update_comment(request, comment_id, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
     comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
 
     if request.method == 'GET':
@@ -72,7 +73,7 @@ def update_comment(request, comment_id):
             comment_form = CommentForm(
                 request.POST, instance=comment)
             comment_form.save()
-            return redirect('blog_details')
+            return redirect(reverse('blog:blog_details', args=[blog.id]))
         except ValueError:
             messages.error(
                 request, 'Invalid information. Please try again.')
@@ -84,8 +85,10 @@ def update_comment(request, comment_id):
 
 
 @login_required
-def delete_comment(request, comment_id):
+def delete_comment(request, comment_id, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
     comment = get_object_or_404(Comment, pk=comment_id, user=request.user)
     if request.method == 'POST':
         comment.delete()
-        return redirect('blog_details')
+        messages.success(request, 'Comment deleted!')
+        return redirect(reverse('blog:blog_details', args=[blog.id]))
