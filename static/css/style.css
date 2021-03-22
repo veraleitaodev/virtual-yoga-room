@@ -122,6 +122,10 @@ h5 {
     letter-spacing: 1px;
 }
 
+a {
+    text-decoration: none;
+}
+
 button,
 .btn {
     font-family: 'Poiret', sans-serif;
@@ -180,6 +184,9 @@ input[name='q']::placeholder{
 }
 
 /*-- Hover --*/
+a:hover {
+    box-shadow: #f2f2f2;
+}
 a.nav-link:hover {
     color: #819FA6 !important;;
 }

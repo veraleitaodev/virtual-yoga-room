@@ -36,16 +36,20 @@
         </div>
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-5">
-                <p><em>{{ comments.count }} comment{{comments.count|pluralize}}</em><i class="fas fa-meteor pink"></i></p>
+                <p><em>{{ comments.count }} comment{{comments.count|pluralize}} </em><i class="fas fa-meteor pink ms-2"></i></p>
                 <hr>
                 <!--display of all comments related to the post-->
                 {% for post in comments %}
+                
                     {% autoescape on %}
-                        <p>{{ post.comment }}</p>
+                        <p class="logo-green"><i class="fas fa-sticky-note logo-green me-2"></i>{{ post.comment }}</p>
                         <p class="text-muted">{{ post.user.username }}</p>
                     {% endautoescape %}
-                    <p class="text-muted"><small>{{ post.date|date:'d M Y'}}</small></p> 
-                    <hr>
+                
+                    <p class="text-muted"><small>{{ post.date|date:'d M Y'}}</small></p>
+                    <a href="{% url 'blog:update_comment' post.id %}" class="text-decoration-none dark-pink text-end"><i class="fas fa-pencil-alt"></i></a>
+                    
+                        <hr>
                 {% endfor %}
             </div>
 
