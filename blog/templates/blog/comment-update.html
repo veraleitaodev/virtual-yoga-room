@@ -28,13 +28,12 @@
         <!--page content row - content is formated with html when imputted in django admin-->
         <div class="row pb-3">
             <div class="col-10 offset-1 mb-3">
-                {% if request.user != comment.user %}
-                    <div class="alert alert-success text-center" role="alert"> This comment can only be edited by the author </div>
-                {% else %}
-                    <form action="POST">
+                    <form method="POST" >
                         {{ comment_form|crispy }}
+                        {% csrf_token %}
+                        <a href="{% url 'blog:blog_details' comment_form.blog.id %}" class="btn btn-outline-dark">cancel</a>
+                            <button type="submit" class="btn white bg-dark-pink shadow">Save</button>
                     </form>
-                {% endif %}
             </div>
         </div>
         
