@@ -48,6 +48,7 @@
                 
                     <p class="text-muted"><small>{{ post.date|date:'d M Y'}}</small></p>
                     <a href="{% url 'blog:update_comment' post.id %}" class="text-decoration-none dark-pink text-end"><i class="fas fa-pencil-alt"></i></a>
+                    <a href="{% url 'blog:update_comment' post.id %}" class="text-decoration-none dark-pink text-end"><i class="fas fa-times"></i></a>
                     
                         <hr>
                 {% endfor %}
